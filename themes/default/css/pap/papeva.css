@@ -1,0 +1,163 @@
+*{ margin:0; padding:0; font-size:12px; font-family:"宋体"}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/
+body{ background:#f6f6f6}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/
+.float_l{ float:left}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/
+.w885{ width:885px}
+.w500{ width:500px}
+.w600{ width:600px}
+.w180{width:180px}
+.w60{ width:60px }
+.w400{ width:400px}
+.xlc-jxs{ margin:0 auto}
+.xlc-jxs-eva{}
+.eva-head{ background:#f5f5f5; height:30px; line-height:30px; margin:0}
+.eva-head li{ float:left; list-style:none; text-align:center}
+.clear{ clear:both; height:0px}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/
+.txxx{ height:35px; line-height:35px; text-indent:15px; border-bottom:1px solid #c9d5e3; font-size:14px; font-weight:bold; color:#FB7722; background:#fff}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/
+.bor_back {border: 1px solid #c5d2e2;background: #fff;}/*开发时，此句样式请不要放入系统中，以免造成冲突或重复*/.eav-sp-info,.eav-buytime,.eav-buytime,.eav-sp-img,.eav-sp-name,.eav-caozuo{ float:left; height:100px; line-height:50px}
+.eav-sp-img{ margin-left:20px}
+.eav-sp-img img{width:60px; height:60px}
+.eva-body-li{  text-align:center; min-height:60px; padding-top:0px; list-style:none; border-bottom:1px solid #ebebeb}
+.eav-sp-name a{ display:block; width:400px; height:60px; line-height:60px;white-space: nowrap; overflow:hidden;text-overflow:ellipsis; color:#666; text-decoration:none}
+.eav-sp-name a:hover{ color:#FB7722} 
+.eav-publish{ color:#FB7722; cursor:pointer}
+.color_r{ color:red}
+.evaluation{ border:1px solid #ebebeb; margin:0 10px 10px 10px; background:#fdfffa; position:relative; padding:20px 100px; color:#666; display:none;}
+.eav-spirit{ margin-top:20px}
+
+
+/*星星打分样式*/
+#star{position:relative;width:600px;height:24px; color:#666;*width:658px }
+#star ul,#star span{float:left;display:inline;height:19px;line-height:19px;}
+#star ul{margin:0 10px;}
+#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(../../images/papeva/star.png) no-repeat;}
+#star strong{color:#f60;padding-left:10px;}
+#star li.on{background-position:0 -28px;}
+#star p{position:absolute;top:20px;width:159px;height:60px;display:none;background:url(../../images/papeva/icon.gif) no-repeat;padding:7px 10px 0;}
+#star p em{color:#f60;display:block;font-style:normal;}
+
+
+
+/*三角形样式*/
+.triangle-border {
+    position:absolute;
+    right:90px;
+    overflow:hidden;
+    width:0;
+    height:0;
+    border-width:10px;
+    border-style:dashed dashed solid dashed;
+}
+.tb-border {
+    top:-21px;
+    border-color:transparent transparent #ebebeb transparent;
+}
+.tb-background {
+    top:-20px;
+    border-color:transparent transparent #fdfffa transparent;
+}
+.triangle-border2 {
+    position:absolute;
+    top:81px;
+    overflow:hidden;
+    width:0;
+    height:0;
+    border-width:20px;
+    border-style:dashed dashed dashed solid;
+}
+.tb-border2 {
+    right:-40px;
+    border-color:transparent transparent transparent #ebebeb;
+}
+.tb-background2 {
+    right:-39px;
+    border-color:transparent transparent transparent #f5f5f5
+}
+/*输入限制*/
+.Form{width:600px;}
+.Form textarea{
+    display:inline-block;padding:6px 12px;line-height:20px;background:#fff;border:1px solid #ebebeb;resize:none;color:#666
+
+}
+.Form textarea{min-height:90px;}
+.Form textarea:focus{
+    border-color:#006499;
+    box-shadow:0 1px rgba(34, 25, 25, 0.15) inset, 0 1px rgba(255, 255, 255, 0.8), 0 0 14px rgba(82, 162, 235, 0.35);
+    -moz-box-shadow:0 1px rgba(34, 25, 25, 0.15) inset, 0 1px rgba(255, 255, 255, 0.8), 0 0 14px rgba(82, 162, 235, 0.35);
+    -webkit-box-shadow:0 1px rgba(34, 25, 25, 0.15) inset, 0 1px rgba(255, 255, 255, 0.8), 0 0 14px rgba(82, 162, 235, 0.35);
+}
+
+
+
+
+/* wordage */
+.wordage{text-align:right;font-size:12px;color:#5e5e5e;margin:0 0 0 490px;}
+
+/*上传图片*/
+
+.eav-btn_addPic2{
+    display: inline-block;
+    position: relative;
+    height: 80px;
+    width:80px;
+    overflow: hidden;
+    border: 1px solid #ebebeb;
+    color: #666;
+    font: 12px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration:none
+}
+
+.eav-filePrew2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0;
+    filter:alpha(opacity: 0);
+}
+/*灰色按钮*/
+.gray{
+    padding:5px 15px;
+    color: #8c96a0;
+    text-shadow:1px 1px 1px #fff;
+    border:1px solid #dce1e6;
+    box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+    background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+    background: linear-gradient(top,#f2f3f7,#e4e8ec); cursor:pointer
+}
+.gray:hover{ color:#444}
+
+
+
+/*满意度评价*/
+.m-top10{ margin-top:10px}
+.satisfied{  border:1px solid #ebebeb; overflow: hidden;clear: both;margin:10px 10px;}
+.jg-info{ width:50%; position:relative; height:100%; background:#f5f5f5; }
+.eav-jg-img img{ width:100px; height:100px; margin-top:10px}
+.eav-jg-info{ margin-left:20px; color:#444; width:60%} 
+.eav-jg-info p{ line-height:24px}
+.xy-jg img{ width:18px; height:18px;}
+.eav-demo .target-demo { display: inline-block; vertical-align: middle; width:170px!important }
+/*评价说明*/
+.eav-assessment{ padding:10px 10px}
+.eav-assessment p{ line-height:20px; color:#444}
+
+
+
+/*经销商对修理厂评价*/
+.m_left30{ margin-left:30px}
+.eav-spirit2{ margin-top:10px}
+.eav-spirit2 .Form{width:300px;}
+.eav-spirit2 .w95{ width:95px}
+.eav-spirit2 .wordage{margin:0 0 0 180px;}
+.m_left10{ margin-left:10px}
+.jg-info2{ width:45%}
+.satisfied2{ overflow:  hidden; clear: both}
+
+
+

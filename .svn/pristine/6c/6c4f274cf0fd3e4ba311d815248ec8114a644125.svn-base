@@ -1,0 +1,36 @@
+@CHARSET "UTF-8";
+.title {
+    height: 79px;
+    line-height: 79px;
+    margin-left: 25px;color: #2379c6;
+    font-weight: bold; font-size:14px}
+.icon-login-word {
+    background: url("../images/icons/icon-login-word.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 6px;
+    width: 35px;
+}
+.display-ib {
+    display: inline-block;
+}
+.form-row {
+    line-height: 1em;
+    margin: 10px 0;
+}
+.label {
+    margin-right: 0;
+    text-align: right;
+    width: 65px; display:inline-block
+}
+.width214{width:214px}
+.input{ margin-left:0px}
+.auto_height:after {
+    clear: both;
+    content: "clear";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.content-rows {
+    margin-top: 10px;
+}

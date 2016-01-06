@@ -1,0 +1,46 @@
+Options +FollowSymLinks -Indexes
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteCond %{REQUEST_URI} !^/themes/default/css/about:blank
+#RewriteCond %{REQUEST_URI} !^/upload/
+#RewriteCond %{REQUEST_URI} !^/themes/
+
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+# when 403 output blank replace of Forbiden info
+ErrorDocument 403 " "
+
+<IfModule mod_deflate.c>
+    SetOutputFilter DEFLATE
+    
+    SetEnvIfNoCase Request_URI .(?:gif|jpeg|png)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:exe|tgz|zip|bz2|sit|rar)$ no-gzip dont-vary
+    SetEnvIfNoCase Request_URI .(?:pdf|mov|avi|mp3|mp4|rm)$ no-gzip dont-vary
+    
+    AddOutputFilterByType DEFLATE text/html  text/css  text/plain
+    AddOutputFilterByType DEFLATE application/ms* application/vnd* application/postscript application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/x-httpd-php application/x-httpd-fastphp
+    
+    BrowserMatch ^Mozilla/4 gzip-only-text/html 
+    BrowserMatch ^Mozilla/4.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+<IfModule mod_expires.c>
+   	ExpiresActive On
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 month"
+	ExpiresByType application/x-shockwave-flash "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+	ExpiresByType application/x-javascript "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

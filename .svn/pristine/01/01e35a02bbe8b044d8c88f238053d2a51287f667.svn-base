@@ -1,0 +1,16 @@
+/*.content2{ padding:10px 5px 15px 20px ; width:885px;}*/
+.content2{  width:885px;}
+.yxgl_content1a{ margin:10px 20px}
+.yxgl_content1a p{ height:auto; line-height:24px}
+.yxgl_content1a b{ color:#0265be; font-size:14px}
+.yxgl_content1{border:1px solid #c5d2e2; background:#fff}
+.yxgl_content3{background:#fff; border:1px solid #c5d2e2;}
+.yxgl_content2 ul li{ list-style:none; display:block; margin-left:20px; background:url(../images/tubiao2.png) no-repeat; height:20px; line-height:20px; float:left}
+.yxgl_content2 ul li a{ margin-left:25px}
+.yxgl_content3 table{ width:884px}
+.yxgl_content2 .yxgl_add{ background-position:0px -3px}
+.yxgl_content2 .yxgl_del{ background-position:0px -62px}
+.yxgl_content2 .yxgl_editor{ background-position:0px -33px}
+.yxgl_content2 .yxgl_pldr{  background-position:0px -33px}
+.yxgl_lm{ background:url(../images/hyzx_bg.png) repeat-x; width:884px; height:35px; line-height:35px}
+.yxgl_lm span{ color:#0265be; font-size:14px; font-weight:bold} 

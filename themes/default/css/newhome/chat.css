@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,h1,h2,h3,h4,h5,h6,p,br,form,input,button,textarea,select,fieldset,blockquote,ul,ol,li,dl,dt,dd,pre,spang,i,em{margin:0;padding:0; list-style:none; font-style:normal; font-size:12px;}
+a{ text-decoration:none}
+.fl{ float:left;}
+.fr{ float:right;}
+
+.chaticon{ width:238px; height:42px; background:url(../../images/chat/noreget.png) no-repeat; position:fixed; right:15px; bottom:27px;z-index:102}
+.chaticon em{ display:none; cursor:pointer; width:226px; height:42px; line-height:42px; color:#f27300; text-align:right; font-size:16px;}
+.chaticon .msgs{ display:none;}
+.chaton{ background:url(../../images/chat/icon_03.png) no-repeat;}
+.chaton em{ display:block; cursor:pointer; width:226px; height:42px; line-height:42px; color:#f27300; text-align:right; font-size:16px; position:absolute; z-index:90;}
+.chaton .msgs{ display:none; width:25px; height:22px; position:absolute; right:40px; top:10px;}
+.noline{ opacity:0.4;filter:alpha(opacity=40);}
+
+
+
+/*弹出框*/
+.i_mian{ width:600px; min-height:100px; padding:9px; background:url(../../images/chat/bj.png) no-repeat; position:absolute; bottom:42px; right:-9px; display:none;z-index:100}
+/*联系人列表*/
+.i_mian .contacts{ width:170px; /*height:405px;*/ float:left; background:url(../../images/chat/l-bj.png) repeat-y;}
+.contacts h2{ width:158px; height:40px; padding-left:12px; background:url(../../images/chat/t-bj.png) repeat-y;}
+.contacts h2 input{ float:left; border:none; width:122px; height:38px; padding-left:4px; background:url(../../images/chat/s-bj.png) 0px 26px no-repeat; color:#FFF;}
+.contacts h2 #search{ border:none; width:32px; height:40px; background:url(../../images/chat/search.png) 4px 10px no-repeat; cursor:pointer;}
+.contacts ul{height:325px;overflow-y:scroll;overflow-x:hidden}
+.contacts li{ width:156px; height:30px; padding:2px; cursor:pointer;line-height: 30px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.contacts li a{height:30px; line-height:30px; padding-left:4px;}
+.contacts li a{height:30px; line-height:30px; padding-left:10px;width:84px;overflow:hidden; float:left;text-overflow: ellipsis;white-space: nowrap;}
+.contacts li.active{ background:#d7d7d7; color:#f27300; border-left:2px solid #f27300;}
+.contacts li.active a{color:#f27300}
+#chat-list li img{ float:left; width:30px; height:30px;}
+#chat-list li i{ float:right; width:30px; height:30px; background:url(../../images/chat/mess.png) 5px 5px no-repeat; color:#fff; text-align:center; line-height:30px; font-size:14px;}
+
+.contacts h3{ height:24px; width:167px; padding:8px 0px; background:#e6d8ca;}
+.contacts h3 a{ color:#888; height:24px; line-height:24px; padding:0px 20px 0px 10px;}
+/*消息框*/
+.m_m{ width:429px; float:left; padding-left:1px;}
+.m_m h2{ height:40px; width:408px; line-height:40px; padding-left:20px;}
+.m_m h2 a{ font-size:16px; color:#fff;}
+.m_m h2 ul{ float:right;}
+.m_m h2 li{ width:22px; height:22px; padding:9px; float:left; cursor:pointer;}
+.m_m h2 li.add{ background:url(../../images/chat/add.png) 9px 9px no-repeat;} 
+.m_m h2 li.show{ background:url(../../images/chat/show.png) 9px 9px no-repeat;}
+.m_m h2 li.close{ background:url(../../images/chat/close.png) 9px 9px no-repeat;}
+/*更多消息*/
+.m_h{ width:100%; height:24px; background:#fac799;}
+.m_h p{ width:390px; text-align:center; height:24px; line-height:24px; color:#f59136; padding-right:0px; text-indent:30px;}
+.m_h i{ width:30px; height:24px; background:url(../../images/chat/x.png) 10px 6px no-repeat; cursor:pointer;}
+/*消息主题*/
+
+.sendmsg{ width:100%; height:40px; background:#ffefe0;}
+.sendmsg .sendinput{ float:left; border:none; width:285px; height:40px; padding-left:20px; background:url(../../images/chat/send.png) 18px 30px no-repeat; line-height:40px;}
+/*.sendmsg ul{ float:right;}*/
+.sendmsg li{ width:40px; height:40px; float:left; cursor:pointer; text-align:center; line-height:40px; color:#fff;}
+.sendmsg li.sd {background:url(../../images/chat/sd.png) 0px 9px no-repeat;}
+.sendmsg li.see{ background:url(../../images/chat/see.png) 12px 9px no-repeat;}
+.sendmsg .pho{ background:url(../../images/chat/pho.png) 9px 9px no-repeat;position:relative;overflow:hidden;}
+.sendimg{position:absolute;right:0px;top:0px;cursor:pointer;filter:alpha(opacity:0);opacity:0;width:40px;height:40px}
+
+
+.bj{float:left;max-width:320px; margin:0px 0px 10px 0px;color:#666;background:url(../../images/chat/lt.png) left top no-repeat; padding-left:16px;}
+.c_lt{background:#ffe7d2 url(../../images/chat/lt.png) -16px 0px no-repeat;}
+.c_bl{background:url(../../images/chat/bl.png) left bottom no-repeat;}
+.c_br{background:url(../../images/chat/br.png) right bottom no-repeat;}
+.c_rt{background:url(../../images/chat/rt.png) right top no-repeat;}
+.c_rt p{padding:10px 16px;min-height:15px;height:auto}
+
+.mc_lt{background:url(../../images/chat/mlt.jpg) left top no-repeat;}
+.mc_bl{background:url(../../images/chat/mbl.jpg) left bottom no-repeat;}
+.mc_br{background:url(../../images/chat/mbr.jpg) right bottom no-repeat;}
+.mc_rt{background:#d6e5f4 url(../../images/chat/m-rt.jpg) right top no-repeat;}
+.mc_rt p{padding:10px 16px;min-height:15px;height:auto}
+
+/*机构搜索*/
+.suggestion_img{height:30px;width:30px;float:left;margin:2px 3px 2px 0px}
+.suggestion_img img{height:30px;max-width:30px;line-height:30px;border-radius:30px;}
+.suggestion_organ{height:30px;line-height:30px;overflow:hidden;text-overflow: ellipsis;white-space:nowrap;float:left;width:90px}
+#chat-list li img{display:inline-block;height:30px;max-width:30px;line-height:30px;border-radius:30px;}
+
+/*聊天信息*/
+.msgbox li span img{ float:left; width:30px; height:30px;}
+.msg-text{word-break:break-all}
+.msg-text img{float:none;max-width:60px;max-height:60px}
+.message{ width:425px;height:301px;overflow-y:scroll;overflow-x:hidden}
+.message li{ padding-left:10px; padding-top:10px; width:390px;}
+.message ul.mine li{}
+.message ul.mine li span{ float:right;}
+.message ul li span img{border-radius: 30px;}
+.mbj{ float:right;max-width:320px; margin:0px 0px 10px 20px;color:#666;background:url(../../images/chat/mrt.jpg) right top no-repeat; padding-right:12px;}
+
+
+
+

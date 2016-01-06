@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+.bumen{ background:url(../images/tubiao2.png) no-repeat -2px -150px; text-indent:2em;  height:20px; line-height:20px;cursor:pointer;display:block; }
+.ren{ background:url(../images/ren.png) no-repeat 0px -3px; display:inline-block;text-indent:20px;height:20px; line-height:20px;color:black}
+.hyzx_lm_info{ height:550px; overflow:auto}
+.ren_current{color:#73a6d5;font-weight:bold  }

@@ -1,0 +1,50 @@
+/* 
+    Document   : page.css
+    Created on : 2014-7-26, 10:25:57
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.pager{
+    height: 40px;
+    text-align:center;
+}
+.pager .row-fluid {
+    padding-top: 8px;
+}
+.pager .spanl {
+    float: left;
+    line-height: 24px;
+    margin-left:5px;
+}
+.pager .spanr {
+    float: right;
+    line-height: 24px;
+    margin-right:5px;
+}
+.pager .btn-tiny {
+    background: url("../../images/jpd/hyzx_bg.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: inline-block;
+    height: 25px;
+    line-height: 30px;
+    width: 25px;
+}
+.pager .selected {
+    /*background: url("../../images/jpd/page_bg.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+	background: url("../../images/jpd/page_bg2.png") no-repeat scroll 0 0;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+}
+
+.pager .selected a {
+    color: #fff;
+}
+.pagination ul{ }
+.pagination ul li{ float:left; margin-left:10px; height:24px; line-height:24px}
+.goto{ margin-left:10px; margin-top:-4px}
+.goto input{ width:30px}
+.pagination{  text-align:center}

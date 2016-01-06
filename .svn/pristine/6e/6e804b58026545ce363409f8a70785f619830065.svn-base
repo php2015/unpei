@@ -1,0 +1,130 @@
+@charset "utf-8";
+/* CSS Document */
+/*html,body,h1,h2,h3,h4,p,span,a,div,ol,ul,li,dl,dt,dd,table,tbody,tfoot,thead,tr,th,td,input,textarea,form*/
+input{margin:0;padding:0;font:12px/2em '宋体',Arial,Verdana,Helvetica,sans-serif;-webkit-tap-highlight-color:rgba(0,0,0,0); list-style:none;}
+/*body{-webkit-text-size-adjust:none;min-width:1000px; background:#f6f6f6;}*/
+.fl{float:left}
+.fr{float:right}
+img{ display:inline-block; border:0px;}
+em,i{font-style:normal;font-weight:normal}
+a{text-decoration:none; color:#444; font-family:'宋体';}
+.clear{ clear:both;}
+input{border:1px solid #c5d2e2; padding-left:4px;height:24px;line-height: 24px;}
+
+
+/*head*/
+.head{ width:1000px; height:102px; margin:0px auto;}
+/*main*/
+.main{ width:1056px; min-height:640px; margin:0px auto; padding-top:10px;}
+/*workspace*/
+.main .workspace{ width:885px; min-height:640px; padding-left:20px;}
+.workspace h2{ width:883px; height:30px; border:1px solid #f9c9a1; background:#ffefe0; line-height:30px; text-indent:20px; color:#444;}
+/*我的信用管理*/
+.mywork{ width:883px; min-height:376px;height:auto; border:1px solid #c5d2e2; margin:20px 0px; background:#fff;}
+.mywork h3{ width:100%; height:32px; background:#f2f2f2; border-bottom:1px solid #dedede; text-indent:14px; color:#f27300; line-height:32px; font-size:14px; font-weight:bold;}
+.mywork p{ padding-left:50px; background:url(../../images/papmall/eval1.png) no-repeat 12px 0px; font-size:14px; font-weight:bold; color:#000; margin:10px 0px;height:25px;line-height:25px}
+.mywork dl{ height:98px; padding-left:20px; color:#444;}
+.mywork dl dt{ text-indent:12px; height:32px; line-height:32px;}
+.mywork dl dt a{ color:#000; font-weight:bold;}
+.mywork dl dd{ padding-top:6px;}
+.mywork dl dd a{ display:inline-block; height:16px; line-height:16px;}
+/*.mywork dl dd i{ display:inline-block; width:15px; height:16px; background:url(../../images/papmall/eval3.png) 0px 2px no-repeat;}*/
+.mywork dl dd em{ display:inline-block; width:100px; height:16px; background:url(../../images/papmall/eval4.png) no-repeat 0px 4px;}
+.mywork dl dd span{ display:inline-block; height:16px; line-height:16px; font-size:16px; font-weight:bold; color:#ec6b32;}
+/*统计评价*/
+.mywork h4{ width:100%; height:28px; line-height:28px; background:#fffae6; margin-bottom:4px;}
+.mywork h4 a{ float:left; padding-left:10px; font-weight:bold; color:#000;}
+.mywork h4 a i{ color:#0263c1;font-weight:bold; font-size:14px;}
+.mywork h4 span{ float:right; padding-right:10px;}
+.mywork h4 span em{ color:#f24541;}
+
+.mywork .goods{ width:423px; height:176px; margin-left:10px; border:1px solid #fadfb0;}
+.goods ul{ width:100%; height:28px; border-top:1px solid #fadfb0;}
+.goods ul.g_one{ border:none;}
+.goods ul li{ float:left; width:84px; height:28px; line-height:28px; text-align:center; color:#444;}
+.goods ul li i{ color:#0263c1;}
+
+.mywork .service{ width:423px; min-height:176px;height:auto;margin-bottom:10px; margin-left:10px; border:1px solid #fadfb0;}
+/*.service h4{ margin-bottom:22px;}*/
+.service ul{ float:left;}
+.service ul li{ width:180px; height:28px; line-height:26px; color:#444;}
+.service ul li em{ color:#f24541;}
+.service ul li i{ float:left;}
+.service ul li i.half{ width:24px; height:24px; background:url(../../images/papmall/eval4.png) no-repeat;}
+.service ul li i.floor{ width:24px; height:24px; background:url(../../images/papmall/eval5.png) no-repeat;}
+.service ul li i.rest{ width:24px; height:24px; background:url(../../images/papmall/eval6.png) no-repeat;}
+.service ul.s_one li{ text-align:right;width:200px}
+.service ul.s_two li{ width:160px;height:26px;}
+.service ul.s_two li a{ float:right;padding-left:2px; padding-top:2px;}
+/*买家评价*/
+.appraise{ width:883px; border:1px solid #c5d2e2; background:#fff;/* position:relative;*/ margin-bottom:20px;}
+.appraise ul.apptop{ width:100%; height:42px; border-bottom:2px solid #c5d2e2;}
+.appraise li{ float:left;}
+.appraise ul.apptop li{ height:28px; padding-top:14px; cursor:pointer;}
+.appraise ul.apptop li a{ display:block; height:16px; line-height:14px; font-size:14px; padding:0px 12px; border-right:1px solid #c9d5e3; font-weight:bold;}
+.appraise ul.apptop li.on{ border-bottom:2px solid #f27300;}
+.appraise ul.apptop li.on a{ color:#f47202;}
+/*买家商品评价div*/
+.appraise .subapp{ width:100%; min-height:624px; display:block;/* position:absolute; left:0px; top:44px;*/ background:#fff;}
+/*.subapp p{ padding-top:12px;}*/
+.subapp label{ padding-left:20px;}
+/*.subapp a{ display:block;}*/
+/*.appraise ul{ width:858px; min-height:34px; margin:0px auto; border-bottom:1px solid #c5d2e2;}*/
+.appraise ul.ultop{ height:34px; background:#f4f4f4; border:1px solid #c5d2e2; margin-top:14px;}
+.appraise ul.ultop li{ height:34px;line-height:34px; padding:0px; font-weight:bold;}
+.subapp li.sub_one{ width:88px; text-align:center; line-height:78px;}
+.subapp li.sub_two{ width:192px;}
+.subapp li.sub_two span{ color:#666;}
+.subapp li.sub_thr{ width:270px; line-height:24px; padding-top:6px;}
+.subapp li.sub_fou{ width:160px;}
+.subapp li.sub_fou a{ padding-top:14px;}
+.subapp li.sub_fiv{ width:146px; text-align:center; cursor:pointer; position:relative;}
+.subapp li.sub_fiv a{ padding-top:24px;}
+.subapp ul li i{ color:#f47202;}
+/*回复弹窗*/
+.subapp .reply{ position:absolute; display: none; right:136px; top:54px; z-index:6; width:663px; height:204px; padding-top:26px; background:url(../../images/papmall/evalbj.png) no-repeat;}
+.subapp .reply p{ width:633px; height:24px; padding:0px 15px;}
+.subapp .reply p span{ cursor:pointer; z-index:9;}
+.subapp .reply textarea{ width:586px; height:114px; max-width:586px; max-height:114px; min-width:586px; min-height:114px;}
+/**/
+.subapp .notice{ width:40px; height:16px; position:absolute; right:56px; top:120px; z-index:8;}
+
+/*买家信用评价div*/
+.subapp2{ width:100%; min-height:624px;background:#fff;}
+.subapp2 ul.ultop li.sub_one{ text-indent:24px;}
+.subapp2 li.sub_one{ width:195px; text-indent:12px;}
+.subapp2 li.sub_one p{ line-height:30px;}
+.subapp2 li.sub_two{ width:140px; text-align:center;}
+.subapp2 li.sub_thr{ width:400px; text-align:center;}
+.subapp2 li.sub_fou{ width:118px;}
+.subapp2 li.sub_fou a{ display:block; padding-top:20px;}
+
+
+/*翻页列表*/
+/*.applist{ width:340px; height:40px; padding:20px;}
+.applist ul{ width:100%; border:none; height:40px; border-left:1px solid #c5d2e2;}
+.applist li{ height:38px; line-height:38px; border:1px solid #c5d2e2; border-left:none; cursor:pointer;}
+.applist ul li em{ padding:0px 16px; font-family:'微软雅黑'; color:#0263C1;}
+.applist ul li.on em{ color:#666;}*/
+
+
+/*增加的样式*/
+.flimg{width:90px;height:90px}
+.eval_tabel{padding:10px}
+.eval_tabel th{font-weight:bold}
+.eval_tabel th,.eval_tabel td{vertical-align: middle;}
+.goods_eval1,.goods_eval2{text-align:left;padding-left:20px;height:auto;word-break:break-all}
+.goods_eval1 a{border:1px solid #dcdcdc;width: 82px;height: 82px;text-align: center;display: table-cell;vertical-align: middle;}
+.goods_eval1 a img{max-width: 82px;max-height: 82px;}
+.goods_eval2{text-indent:10px}
+.goods_eval3{text-align:left;padding-left:30px;height:auto;width:200px;overflow:hidden;}
+.goods_eval3 a{color:#f47202}
+.goods_time{color:#666}
+.goods_num{padding-right:20px;;overflow:hidden;display:block;float:left}
+.goods_num a{color:#888;}
+.goods_name_input{color:#ccc}
+.eval_organ{width:110px;margin:0 auto;text-align:center;word-break:break-all}
+.eval_organ a{color:#6e6edf}
+.ui-dialog{background:none}
+.mywork dl dd{height:26px}
+.mywork dl dd a{font-weight:bold}

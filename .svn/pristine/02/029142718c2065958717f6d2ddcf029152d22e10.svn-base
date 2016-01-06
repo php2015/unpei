@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+.bj{ margin-bottom:10px;color:#666;background:url(../../images/chat/lt.png) left top no-repeat; padding-left:16px;}
+.c_lt{background:#ffe7d2 url(../../images/chat/lt.png) -16px 0px no-repeat;}
+.c_bl{background:url(../../images/chat/bl.png) left bottom no-repeat;}
+.c_br{background:url(../../images/chat/br.png) right bottom no-repeat;}
+.c_rt{background:url(../../images/chat/rt.png) right top no-repeat;}
+.c_rt p{padding:10px 16px;}
+
+.mbj{ margin-left:40px; margin-bottom:10px;color:#666;background:url(../../images/chat/mrt.jpg) right top no-repeat; padding-right:12px;}
+.mc_lt{background:url(../../images/chat/mlt.jpg) left top no-repeat;}
+.mc_bl{background:url(../../images/chat/mbl.jpg) left bottom no-repeat;}
+.mc_br{background:url(../../images/chat/mbr.jpg) right bottom no-repeat;}
+.mc_rt{background:#d6e5f4 url(../../images/chat/m-rt.jpg) right top no-repeat;}
+.mc_rt p{padding:10px 16px;}
+
+
+
+
+
+
+
+
+
+

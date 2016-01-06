@@ -1,0 +1,48 @@
+.content_info{border:1px solid #f5f7fa; margin-top:30px}
+.info{ margin: 10px 30px 20px 30px; }
+.button{ background:url(../../images/login/button.jpg) no-repeat ; color:#fff; font-weight:bold; height:35px; width:183px; border:none;  cursor:pointer; outline:none}
+.num1,.num2{ background:url(../../images/login/libg.jpg) no-repeat; height:35px; width:40px}
+.subway{width:840px; margin-left:10px}
+.line{ line-height:40px}
+.num2{ background-position: 0px -61px}
+#tab{width:825px;position:relative;margin:20px auto; border:1px solid #ddd; border-top:2px solid #999}
+#tab .tab_menu{width: 825px;
+ 
+background: #f7f7f7;
+height: 31px;
+color: #666;
+line-height: 25px;
+
+
+border-bottom:1px solid #ddd}
+#tab .tab_menu li{float: left;
+padding: 5px 0;
+width: 120px;
+text-align: center;
+margin-left: -1px;
+position: relative;
+cursor: pointer; }
+#tab .tab_box{width:825px;height:430px;clear:both;position:relative;}
+#tab .tab_menu .selected{cursor:pointer;border-bottom: none;
+background: #fff;
+border-left:1px solid #ddd;
+border-right: 1px solid #ddd;
+background: #fff;
+border-top: 2px solid #0164c1;
+margin-top: -5px;
+height: 25px;
+color: #0164c1;
+line-height: 25px;font-weight:bold}
+.hide{display:none;}
+.tab_box div{padding:10px 10px 20px 40px;}
+.tab_box p{ line-height:30px; margin-top:10px}
+.tab_box p span{ font-size:12px}
+.tab_box .select,.tab_box input{border:1px solid #efefef; height:25px; line-height:25px; width:220px; outline:none;font-size:12px;}
+.tab_box .width100{ width:100px}
+.tab_box .width120{ width:120px}
+.tab_box .width150{ width:150px}
+.button2{ background:url(../../images/submit.png) no-repeat; width:82px; height:30px; color:#fff; font-weight:bold; border:none}
+.m-left5{ margin-left:5px}
+.tab_box div.hide div{ padding:0px}
+
+

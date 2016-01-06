@@ -1,0 +1,39 @@
+*{margin:0; padding:0; margin:0 auto; font-size:14px; color:#343434; list-style:none; font-family:"微软雅黑"; font:normal}
+a{ text-decoration:none}
+.m-top30{ margin-top:30px}
+.m-top10{ margin-top:10px}
+.header_info,.content_info,.footer_info{width:960px; margin:0 auto}
+.header{margin:0 auto; height:54px; border-bottom:3px solid #153a71; width:auto}
+.logo img{ padding:10px 0px}
+.float_l{ float:left}
+.float_r{ float:right}
+.help{line-height:54px}
+.help span a{padding:0 10px; color:#343434; font-size:14px}
+
+.banner{ height:488px; background:url(../../images/promotion/banner.jpg) no-repeat top center; width:auto; margin:0 auto}
+.contents{ margin:0 auto; height:auto; background:#401178}
+.content-info{ width:1000px; margin:0 auto; padding-bottom:20px}
+.content1{ margin:0 auto; height:590px; background:url(../../images/promotion/jieshao.jpg) no-repeat top center; }
+.introduce{ padding:80px 45px 20px}
+.introduce h1{ font-size:20px; color:#f7d013;  letter-spacing:1.5px; font-weight:400}
+.introduce p{ color:#FFF; font-size:16px; font-weight:; letter-spacing:1px; line-height:30px; margin-left:43px;} 
+a.color{color:#f7f538; text-decoration:underline; font-size:16px}
+p.color{ color:#f7f538}
+span.color{color:#f7f538; font-size:16px}
+.title-hd{ width:940px; overflow:hidden}
+.title-hd ul{ width:1000px; margin:0 auto; height:60px; background:#280254;}
+.title-hd ul li{ list-style:none; float:left; color:#fff; line-height:60px; height:60px; width:195px; margin:0 53px 0 0; text-align:center; font-size:20px; position:relative; z-index:2; cursor:pointer}
+.clear{ clear:both}
+.title-hd ul li.active{ background:url(../../images/promotion/tubiao.png) no-repeat -42px -27px; color:#872425; font-weight:bold; height:67px; line-height:62px}
+.title-hd ul li:hover{ background:url(../../images/promotion/tubiao.png) no-repeat -42px -27px; color:#872425; font-weight:bold; height:67px; line-height:62px}
+.title-bd{ width:935px; margin:0 auto; border:2px solid #925ed0; border-top:none; margin-top:-6px; margin-bottom:20px}
+.order,.return,.seek,.install{ padding: 20px 40px}
+.button{ border:none; background:url(../../images/promotion/tubiao.png) no-repeat; cursor:pointer}
+.button1{ width:210px; height:45px ; background-position: -38px -142px}
+.step1{ width:885px; height:92px; background:url(../../images/promotion/step1.jpg) }
+.step1 ul{ padding-top:58px; padding-left:65px}
+.step1 li{color:#fffdfa; font-size:16px; letter-spacing:1px; letter-spacing:1px }
+.info{ height:143px; background:url(../../images/promotion/c8.jpg) no-repeat}
+.info h1{ color:#f7f538;font-size:20px;   letter-spacing:1.5px; font-weight:400; padding-top:20px; padding-left:50px}
+.info p{ margin-left:70px; color:#f7f538; font-size:16px; margin-top:5px}
+.button2{ height:40px; width:160px;background-position: -60px -235px; vertical-align:middle; outline:none}

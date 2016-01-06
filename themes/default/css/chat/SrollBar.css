@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* 滚动条的样式 */
+.scrollUp,.scrollHandle,.scrollDown{overflow:hidden;background-image:url(../../images/chat/ttscrollbar.png);background-repeat:no-repeat;_background-image:url(../../images/chat/ttscrollbar.gif)}
+.scrollBar{height:100%;width:16px;background-repeat:repeat-y;background:url(../../images/chat/ttscrollBarBg.png) top right;overflow:hidden;position:absolute;right:0;top:0;z-index:111}
+.scrollUp,.scrollDown{height:23px;cursor:pointer;position:absolute;left:1px;cursor:pointer}
+.scrollUp,.scrollHandle,.scrollHandleDown,.scrollDown{width:14px;position:absolute;}
+.scrollHandle{height:109px;background-position:-21px 0;left:1px;top:19px;cursor:n-resize;}
+.scrollUp{background-position:left -1px;top:0;}
+.scrollDown{background-position:0 -26px;bottom:0;}

@@ -1,0 +1,41 @@
+
+*{margin:0; padding:0; margin:0 auto; font-size:14px; color:#343434; list-style:none}
+a{ text-decoration:none}
+.header_info,.content_info,.footer_info{width:960px; margin:0 auto}
+.header{margin:0 auto; height:54px; border-bottom:3px solid #153a71; width:auto}
+.logo img{ padding:10px 0px}
+.float_l{ float:left}
+.float_r{ float:right}
+.help{line-height:54px}
+.help span a{padding:0 10px; color:#343434}
+.help span{border-right:1px solid #343434; margin:0}
+.banner{ margin:0 auto; height:180px; background:#e0f2fc}
+.banner_info{ margin: 0 auto; width:960px; height:180px} 
+.footer{ text-align:center; background:#253a59; width:100%; margin-top:10px}
+.footer{ height:85px}
+.footer_info{  line-height:24px; text-align:center;color:#888; padding-top:10px; font-size:12px}
+.footer_info a{  color:#888; padding-right:5px; font-size:12px}
+.footer_info a:hover{color:#0063be}
+.title{ color:#0164c1; font-family:"微软雅黑"; font-size:18px}
+.sub{ line-height:24px; margin-top:10px}
+.letter-title{ color:#ff9720; font-weight:bold}
+.m-top20{ margin-top:20px}
+
+.clear{ clear:both}
+.m-top100{ margin-top:100px}
+.m-top30{ margin-top:30px}
+.m-top10{ margin-top:10px}
+.m-left20{ margin-left:20px}
+.m_left36{ margin-left:36px}
+.m_left72{ margin-left:72px}
+.m_left48{margin-left:48px}
+.m_left60{margin-left:60px}
+.m_left96{ margin-left:96px}
+.m_left108{ margin-left:108px}
+.m-left44{ margin-left:44px}
+.width100{width:100px}
+.m_left12{ margin-left:12px}
+.m_left24{ margin-left:24px}
+
+
+

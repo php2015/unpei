@@ -1,0 +1,90 @@
+.title_lm li{ float:left; font-size:14px; color:#0164c1; text-align:center; width:100px; text-indent:0}
+    .title_lm li:hover{ border-bottom:2px solid #0164c1}
+    .title_lm li.current{border-bottom:2px solid #0164c1 }
+    .txxx2{ border-bottom:2px solid #c5d2e2}
+    .tb_head li{ float:left; color:#fff ; text-align:center}
+    .tb_head .sp_info{ width:380px}
+    .tb_head .price{ width:150px}
+    .tb_head .shuliang{ width:95px}
+    .tb_head .s_fukuan{ width:160px}
+    .tb_head .caozuo{ width:90px}
+    .sp_plcl a{ padding:0px 5px}
+    .sp_plcl{ border:1px solid #ccc; display:inline-block; height:20px; line-height:20px;}
+    .mbx4{ background:#eff4fa;}
+    .mbx4 span{  color:#666}
+    span.zwq_color{ color:#fb540e}
+    .splb_order{ width:780px}
+    .splb_order li{ height:100px; border-bottom:1px solid #ccc; border-right:1px solid #ccc}
+    div.div_info{ text-align:left}
+    .splb_order .price,.splb_order .shuliang,.splb_order .s_fukuan{ line-height:100px}
+    .splb_order .price{ font-weight:400}
+    li.last{ border-bottom:none}
+    .zkss{display:inline-block; width:100px; height:26px; cursor:pointer}
+    .zkss2{display:inline-block; width:100px; height:26px; cursor:pointer}
+    .zkss{background: url(../../images/images/sszh.png)no-repeat 0px -26px;}
+    .zkss2{background: url(../../images/images/sszh.png)no-repeat 0px 0px;;}
+    .zwq_chuxiao_info{ width:270px}
+    .cuxiao{ line-height:100px; text-align:center; margin-right:5px; width:120px}
+    .yicuxiao{ color:#ccc}
+    .cuxiao button{ margin-top:35px}
+    span.cxsp{ border:1px solid #ebebeb; margin-left:10px; padding:3px 10px; background:#fff}
+    span.cxsp a{ color:#999; font-weight:400}
+    .m-left5{ margin-left:5px}
+    .m_left185{ margin-left:185px}
+    .cx_cz span{ line-height:15px;}
+    .m-top20{ margin-top:20px}
+    .m_left120{ margin-left:120px}
+    .cankaojia{ text-decoration:line-through}
+    .submit3{background: url(../..//images/images/submit3.jpg) no-repeat; width:100px}
+    .add_progoods{display:block;float: right;margin-right:35px;} 
+    .add_progoods a:hover{color:#FB540E;text-decoration: underline}
+
+
+/*8-6已买到商品*/
+tr.yigou_sp_lm td{ color:#fff}
+tr.yigou_plpj{ line-height:30px}
+tr.yigou_plpj td{ text-align:left}
+.yigou_sp td{ text-align:center} 
+tr.order_bd td{ height:100px; border:1px solid #ebebeb}
+tr.sep-row td{ height:10px}
+table.yigou_sp tbody tr.yigou_plzt td{ text-align:left; height:35px}
+.button5{ background:#77BAFF; border:none;border-radius: 2px; color:#fff; cursor:pointer}
+.color_blue{ color:blue}
+.button6{ padding:2px 5px}
+
+
+
+
+/*8-6订单状态*/
+.order_bg{ background:url(../images/bg.jpg) repeat-x; height:35px; line-height:35px; border:1px solid #d7d7d7; margin-top:10px}
+.order_bg li{ background:url(../images/orderinfo.jpg) no-repeat 100% 1px;display: inline;
+float: left;
+text-align: center;
+font-size: 14px;
+width:20%}
+.order_bg span{ display:block}
+.order_step{ font-weight:bold; font-size:14px}
+.datatime{ color:#999; font-family:Tahoma, Geneva, sans-serif; margin-top:5px}
+.state .order_step{ width:150px; background:#f2b303;margin: -1px 10px 0; color:#fff; height:35px; line-height:35px;}
+.order_bg li.step_last{ background:none}
+.order_step_info{  clear:both; position:relative} 
+.step-point{ position:absolute; top:-10px; left:12%}
+.step-point2{left:36%}
+.step-point3{left:62%}
+.step-point4{left:86%}
+.order_step_bd{border:2px solid #0164c1; background:#eff4fa}
+.trade-status{ margin:30px} 
+.trade-status a{ color:#0164c1}
+.ddxx{ line-height:30px;border-bottom: 1px solid #c5d2e2;}
+.ddxx p{ height:28px; border-top:2px solid #0164c1; border-right: 1px solid #c5d2e2; width:150px; text-align:center; font-size:14px; font-weight:bold; color:#0164c1; }
+.info-box{ margin:10px 20px;}
+.message{ display:inline-block; border:1px solid #0164c1; padding:4px 10px;  background:url(../images/message.jpg) #edf2f6 no-repeat 1px; text-indent:10px}
+.button7{ background:url(../images/button_bg.jpg) repeat-x; padding:3px 8px; border:1px solid #2d81d7; color:#fff; cursor:pointer}
+.mjxx li{ width:31%; float:left;  text-align:left; line-height:30px; margin-left:10px; white-space:nowrap}
+.mjxx{ border-bottom:1px  solid #ebebeb}
+ tr.order_state_hd{ height:35px; background:#eff4fa; font-weight:bold; font-size:14px; border:1px solid #c5d2e2;}
+ .order_table{ width:840px; text-align:center}
+ .shifukuan span{ font-size:20px;} 
+ ul.last{ border:none}
+.wlxx dt{ line-height:22px}
+.wlxx dd{ position:relative; margin: -22px 0 0 65px; line-height:22px}

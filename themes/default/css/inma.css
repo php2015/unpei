@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+.gim{ width:902px; height:auto;}
+
+.ba{ width:885px; height:200px; margin-top:10px; position:relative; background:url(../images/company/ba1.png) no-repeat;}
+
+//.ba .pho{ width:134px; height:134px; border:4px solid #fff; border-radius:134px; position:absolute; left:40px; top:10px; z-index:9; overflow:hidden;}
+.ba .sjname{ width:610px; height:100px; position:absolute; left:100px; top:33px; background:url(../images/company/bbj.png) repeat; z-index:8; padding-left:126px;}
+.sjname h2{ font-size:24px; line-height:40px; padding-top:12px;}
+.sjname a{ font-size:18px; color:#f27300; font-weight:600; line-height:32px;}
+.ba .mlink{ width:66px; height:34px; position:absolute; right:8px; bottom:0px; line-height:32px; text-align:right; background:url(../images/company/chang.png) no-repeat;}
+.ba .mlink a{ font-size:16px; font-weight:600;}
+.babj{ background:#fff;}
+.ba2{ width:885px; height:315px; margin-bottom:10px;}
+.ba2_1{ width:620px; height:311px; border:2px solid #d6d6d6; float:left; box-shadow:0 0 4px #d6d6d6;}
+.ba2_1 .xxi{ width:360px; height:268px; float:left;}
+.xxi ul{ padding-top:10px; *height:65px;}
+.xxi li{ float:left; width:180px; line-height:32px; font-weight:600;}
+
+.ba2_2{ width:246px; height:311px; border:2px solid #d6d6d6; float:right; box-shadow:0 0 4px #d6d6d6;}
+.ba2_2 ul{ padding-left:18px; padding-top:10px;}
+.ba2_2 li{ line-height:28px;font-weight:600;}
+
+.ba3{ width:885px; height:233px; margin-bottom:10px;}
+.ba3_1{ width:620px; height:229px; border:2px solid #d6d6d6; float:left; box-shadow:0 0 4px #d6d6d6;}
+.bmove{ width:576px; height:180px; position:relative; margin-left:30px}
+
+.bmove_sub{ width:525px; height:180px; position:absolute; left:20px; top:15px; overflow:hidden;}
+.bmove_sub ul{ position:absolute;}
+.bmove li{ width:160px; height:124px; padding:1px; border:1px solid #ccc; float:left; margin:5px;}
+
+.ba3_2{ width:246px; height:229px; border:2px solid #d6d6d6; float:right; box-shadow:0 0 4px #d6d6d6;}
+.ba3_2 li{ font-weight:600; padding-left:18px; line-height:32px;}
+.ba3_2_p{ width:218px; height:128px; margin:0px; padding-left:18px; padding-top:6px;}
+.ba3_2_p a{ font-weight:600;}
+
+
+
+
+
+

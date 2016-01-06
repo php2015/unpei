@@ -1,0 +1,19 @@
+.content_info{margin:10px}
+.jxs_name{height:80px; line-height:80px; background:url(../images/jxs_bg.jpg) repeat-x}
+.jxs_img{background:url(../images/jxs.jpg) no-repeat; text-indent:150px; margin-left:50px; height:80px; font-family:"微软雅黑"; font-size:30px;color:#fff;}
+.call{height:40px; border:1px solid #ec8153; line-height:40px}
+.call_num{ background:url(../images/tel.jpg) no-repeat;margin-left:50px;height:40px;text-indent:50px;color:#ec8157;font-family:"微软雅黑"; font-size:20px;}
+.call_list{margin-right:50px; }
+.call_list a{text-decoration:underline; color:#ec8157;font-size:14px; font-weight:bold}
+.jxs_detail{border:1px solid #e1e1e1; margin-top:10px}
+.jxs_detail_lm{border-bottom:1px solid #e1e1e1; line-height:30px; font-size:14px; font-weight:bold; color:#ec8153; text-indent:30px}
+.jxs_detail1{height:515px}
+.jxs_detail2{padding:20px 30px; line-height:20px}
+.f_weight{font-weight:bold}
+.li_list{}
+.li_list li{float:left; margin-right:20px}
+.width815{width:815px}
+.m_left5{margin-left:5px}
+.m_left150{margin-left:150px}
+.m_left52{margin-left:52px}
+.m_left174{margin-left:174px}

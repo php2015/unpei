@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*全局样式*/
+body{padding:0;margin:0; color:#444; font-size:12px;font-family:宋体;}
+ul,ol,dl,dt,li,dd,p,form,h1,h2,h3,h4,h5,h6,a,input{ padding:0px; margin:0px;}
+ul,ol{list-style:none;}
+img{border:0}
+.clear{clear:both;}
+a{text-decoration:none;}
+.fl{ float:left}
+.fr{float:right} 
+.mt5{margin-top:5px}
+
+/*商品评价*/
+.content{ width:750px; height:785px;  border-left:1px #C5D2E2 solid; margin-top:20px; position:relative; font-size:12px;}
+.headtab{ height:34px; border-bottom:2px solid #c8c8c8; border-top:2px solid #999; background:#f7f7f7;}
+.headtab li a{font-size:14px;cursor:pointer}
+.headtab li a:hover{color:#f27300}
+.headtab li{ float:left; line-height:34px;  padding-left:14px; padding-right:24px; }
+li.proon{border-top:2px solid #f17200; padding-top:6px; position:relative; top:-6px;  background:#fff; border-left:1px solid #dddddd; border-right:1px solid #dddddd; margin-left:-1px; font-weight:bold; color:#F27300}
+.comment{ position:absolute; left:0px; top:38px;}
+.rating{ width:750px;height:138px; border-bottom:1px solid #ddd}
+.rating .rtitle{ height:34px; line-height:34px; font-size:14px; text-indent:19px}
+.rating .percent{ width:180px; text-align:center; font-size:24px; color:#ed5d20; margin-top:13px;}
+.rating .percent i{ font-style:normal; font-size:48px; font-weight:bold; margin-right:4px;}
+.cla_percent{ width:570px; font-size:12px; margin-top:15px}
+.cla_percent p{ height:20px; line-height:20px; text-indent:10px; width:172px; position:relative}
+.cla_percent p i{ font-style:normal; color:#9b9b9b; margin-left:5px;}
+.cla_percent span{ width:100px; height:10px; display:inline-block; background:#e1e1e1; position:absolute; right:0px; top:5px;}
+.cla_percent span .rate1{ height:10px; width:95%; background:#f27300; display:block; position:relative; left:0px; top:0px;}
+.cla_percent span .rate2{ height:10px; width:4%; background:#f27300; display:block; position:relative; left:0px; top:0px;}
+.cla_percent span .rate3{ height:10px; width:1%; background:#f27300; display:block; position:relative; left:0px; top:0px;}
+.cnotice{ font-size:14px; margin-top:36px; margin-left:20px; line-height:25px;}
+.cnotice i{ color:#fb1215; font-style:normal}
+.cnotice b{ color:#fb1215}
+
+.com_main{ margin-top:9px}
+.subtab li{ font-size:12px;cursor:pointer}
+.subtab li:hover{color:#f27300}
+.subtab li i{ color:#F27300; font-style:normal; margin-left:5px;}
+.subtab li.proon{ color:#444; font-weight:normal}
+
+.cmain{ width:750px;position:relative}
+.cmain li{ width:750px;}
+.cmain b{ font-weight:normal; display:inline-block}
+.cmain  b i{ font-style:normal; color:#999}
+.cmain .c1{ width:100px; text-align:center}
+.cmain .c2{ width:310px;}
+.cmain .c3{ width:210px}
+.cmain .cmtitle b{font-weight:bold}
+.cmain .cmtitle{ height:29px; border-bottom:2px solid #d5d5d5; border-top:1px solid #dedede; width:750px; padding:0; background:#fafafa; line-height:32px;}
+.cmain .cmtitle .c2{ text-indent:10px;}
+.cmain .cmtitle .c3{ text-indent:12px;}
+.cmain .cmtitle .c4{ text-indent:12px;}
+.cmain li.cmcontent b{line-height:25px}
+.cmain li.cmcontent .c2{ margin-top:20px;}
+.cmain li.cmcontent .c1{ position:relative; top:-15px;}
+.cmain li.cmcontent .c3{}
+.cmain li.cmcontent .c4{ position:relative;}
+.cmain li.cmcontent .c4 p:hover{color:#f27300; cursor:pointer}
+.cmain li.cmcontent i img{ width:15px; height:13px; margin-right:2px;}
+.photo{ margin-left:107px; height:84px}
+.photo a{ width:82px; height:82px; border:1px solid #dcdcdc; text-align:center;display:table-cell; vertical-align:middle; }
+.photo a img{width:82px; max-height:82px;}
+
+.paging{ width:356px; position:absolute; bottom:-50px; right:0px}
+.paging ul li{ float:left; width:36px;height:37px; border:1px solid #e5e5e5; text-align:center; line-height:37px; cursor:pointer; color:#2953a7; border-right:0px;}
+.paging ul li.pre{ width:90px;color:#9aa5c3}
+.paging ul li.next{ width:90px;border-right:1px solid #e5e5e5;}
+.paging ul li.omit{ border-bottom:0px; border-top:0px; color:#9aa5c3}
+.paging ul li.pageon{color:#9aa5c3}
+.paging ul li.non:hover{color:#f27300}
+
+
+/*买家信息弹出框*/
+.pdetail{ width:215px; height:auto; background:#FFF;box-shadow: 0 0 3px #ff9330;border:1px solid #ff9330; position:absolute; right:-60px;top:50px; display:none}
+.pdetail h3{ height:43px; text-align:center; background:url(../../images/papmall/goodstitlebg.jpg) center center no-repeat; line-height:40px; font-size:14px; color:#f36d01; font-weight:bold}
+.pdetail h4{ color:#000; font-size:12px; font-weight:bold; text-indent:18px; margin-bottom:5px;}
+.level{ text-indent:18px; height:30px; line-height:30px;}
+.level img{ margin-left:2px; width:15px; height:13px;}
+.grate{ margin-left:18px; height:30px; line-height:30px; border-bottom:1px dashed #000}
+.grate span{ width:100px; height:10px; background:#e0e1e3; display:inline-block}
+.grate span i{ width:98%; height:10px; background:#ff9330; display:inline-block}
+.grate b{ margin-left:3px; color:#ff9330}
+.pdetail h5{ font-size:12px; color:#ff9330; font-weight:bold;text-indent:18px; height:38px; line-height:38px;}
+.loan{font-size:12px; color:#000; font-weight:bold;text-indent:18px; line-height:22px;}
+.integrity{font-size:12px; color:#000; font-weight:bold;text-indent:18px;line-height:22px;}
+.pdetail ul{ width:215px; height:25px; line-height:25px; text-indent:18px;}
+.pdetail ul li{ float:left; width:70px;}
+.pdetail ul li em{ font-style:normal}
+.pdetail ul li i{ font-style:normal; color:#ff9330}
+
+#trianglet{ width: 0;height: 0;border-left:10px solid transparent;border-right: 10px solid transparent;border-bottom: 15px solid #fcc192; position:absolute; left:100px; top:-15px;}
+#triangleb{ width: 0;height: 0;border-left:10px solid transparent;border-right: 10px solid transparent;border-bottom: 15px solid #fff; position:absolute; left:100px; top:-13px;}
+.showlv{float:left;text-indent:0px;height:15px;padding-top:4px}

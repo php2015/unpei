@@ -1,0 +1,136 @@
+*{ margin:0 ; padding:0; font-size:12px; color:#666;font-family:宋体}
+
+a{ outline:none}
+table /* 设置table 的样式*/
+{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset, img
+{
+    border:0;
+}
+em, strong
+{
+    font-style:normal;
+    font-weight:normal;
+}
+li
+{
+    list-style:none;
+}
+h1, h2, h3, h4, h5, h6
+{
+    font-size:100%;
+    font-weight:normal;
+}
+a{ text-decoration:none;}
+a:hover{color:#ec8051}
+th, td{vertical-align:middle;}
+.submit{ cursor:pointer}
+.header,.footer{margin:0 auto}
+.header1,.contents,.head1_info{ margin:0 auto; width:1000px}
+
+.contents{ margin-top:10px;padding-bottom:90px} 
+.footer{ text-align:center; background:#333; height:85px; margin-top:10px;  
+         position:absolute;bottom: 0;
+         width: 100%;
+         clear:both;
+}
+
+.footer_info{  line-height:24px; text-align:center;color:#888; padding-top:10px;}
+.footer_info a{ color:#888; padding-right:5px;}
+.footer_info a:hover{color:#ec8051}
+
+.footer .last{ border:none}
+.float_l{ float:left}
+.float_r{ float:right}
+.middle{ vertical-align:middle}
+.m_left10{ margin-left:10px}
+.m_left20{ margin-left:20px}
+.m_top10{ margin-top:10px}
+.width230{ width:230px}
+.logo{ display:table-cell; height:90px; line-height:90px; margin:0 auto; text-align:center; vertical-align:middle}
+.sousuo{ width:357px; height:30px; line-height:30px; border:3px solid #ec8051; margin:25px 5px 10px 20px; background:url(../../images/papmall/tubiao.png) no-repeat; background-position:-32px 3px}
+.sousuo .input{ border:none; height:25px; line-height:25px;*height:19px;*line-height:19px;width:250px; margin:2px;margin-left:27px;*margin-left:5px;*border:1px solid #fff;outline:none; color:#888;}
+.border{ background:url(../../images/papmall/border.jpg) no-repeat; height:70px; padding-top:10px; padding-left:11px; margin-top:10px}
+.add_cx{width:243px;margin-left:45px; margin-right:10px}
+.addcx{font-size:14px;font-weight:bold;}
+.choice{color:#ec8051}
+.sousuo .button{height:30px; margin-top:0px; font-size:14px; width:70px; *margin-top:-27px}
+.button{ margin-top:10px; width:60px; height:26px; line-height:26px;  background:#ec8051; border:none; color:#fff; font-weight:bold}
+.imgmid{display:inline-block;*display:inline;*zoom:1;height:100%;width:1px;margin-left:-1px;vertical-align:middle}
+.logo img{ vertical-align:middle; margin:0 auto;}
+.head_info{ height:30px;}
+.kuaijie_nav{ margin-top:3px}
+.kuaijie_nav ul li{ float:left; background:url(../../images/papmall/tubiao.png) no-repeat; height:25px; line-height:25px; text-indent:2em; margin-left:10px}
+.kuaijie_nav ul li a{ color:#444; border-right:1px solid #0164c1; padding-right:10px}
+.kuaijie_nav ul li a:hover{color:#0063be}
+.sch{background: url("../../images/papmall/tubiao.png") no-repeat -38px 6px;height:30px;text-indent:20px; width:20px}
+.kuaijie_nav .kuaijie4 a{border:none; padding:0}
+.kuaijie_nav .kuaijie1 {background-position:-35px -82px}
+.kuaijie_nav .kuaijie2 {background-position:-35px -119px}
+.kuaijie_nav .kuaijie3{background-position:-35px -159px}
+.kuaijie_nav .kuaijie4 {background-position:-35px -191px}
+.customer{ color:#143a71;}
+.customer a{ color:#666}
+.customer a:hover{color:#ec8051}
+/*快捷导航*/
+.kjdh_info{ position:absolute; z-index:20; right:11px; top:35px; }
+.sanjiao{ text-align:right; margin-right:46px}
+.kjdh_info1{width:500px;  border:2px solid #0164c1; margin-top:-1px; background:#fff}
+.margin{ margin:0px 20px 20px}
+.kj_ej{background:url(../../images/papmall/kjdh/li_bg.png) no-repeat left center;  height:24px; *height:18px; text-indent:16px; line-height:24px; *padding-top:2px;}
+.kj_ej a{ font-weight:bold; letter-spacing:0.5px}
+.kj_yiji{ margin:33px 5px}
+.kj_yiji img{ float:left; vertical-align:middle}
+.kj_yiji span{ color:#0566c4; font-weight:bold; font-size:14px; float:left; line-height:26px; margin-left:10px}
+.kj_sanji li{ border-right:1px solid #ccc; float:left; padding:0px; line-height:12px; text-indent:0px; margin:6px 0px} 
+.kj_sanji li a{ padding:0px 10px; font-weight:400}
+.width335{ width:335px; border-bottom:1px solid #dedede}
+div.last,li.last,span.last{ border:none}
+span.first{ padding-left:0px}
+.kj_sjzx{ height:50px}
+.kj_yiji2{ margin:60px 5px}
+.kj_yiji3{ margin:10px 5px}
+.kj_yiji4{ margin:20px 5px}
+.kj_yiji5{ margin:55px 5px}
+.m-top5{ margin-top:5px}
+.guanbi{ padding:5px 10px 0px 5px; cursor:pointer}
+.select{ width:235px; margin-top:10px; height:25px; border:1px solid #ccd3e4}
+.submit{ background:url(../../images/papmall/tubiao.png) no-repeat; width:90px; height:30px; border:none; color:#fff; font-size:14px; line-height:28px; background-position:0px -235px}
+.header1{ padding:5px; height:80px; margin:0 auto; padding-top:0px}
+.header{ height:120px; border-bottom:3px solid #ec8051}
+.head{ height:30px;background:#F0F0F0;line-height:30px}
+
+
+/*图片垂直居中*/
+.img_box{  display: table-cell;vertical-align:middle; text-align:center;*display: block;     *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/       
+           *font-family:Arial;/*   防止非utf-8引起的hack失效问题，如gbk编码*/         
+}
+
+
+
+/*车系选择*/
+.cxxz_div{ border:1px solid #f2b303; position:absolute; width:560px;right:12px; background:#fff}
+.cxxz{ width:140px; height:150px; overflow-y:scroll}
+.wrapper{height:100%}
+/*.goto{ display:none}*/
+.bigautocomplete-layout{display:none;background-color:#FFFFFF;border:1px solid #ec8051;position:absolute;z-index:100;max-height:220px;overflow-x:hidden;overflow-y:auto; }
+.bigautocomplete-layout table{border-collapse:collapse;border-spacing:0;background:none repeat scroll 0 0 #FFFFFF;width:100%;cursor:default;}
+.bigautocomplete-layout table tr{background:none repeat scroll 0 0 #FFFFFF; height:20px;line-height: 14px}
+.bigautocomplete-layout .ct{background:none repeat scroll 0 0 #f0f0f0 !important;}
+.bigautocomplete-layout .ct div{color:#ec8051}
+.bigautocomplete-layout div{word-wrap:break-word;word-break:break-all;padding:4px; }
+
+   .ui-dialog  .ui-widget-header {
+    background: none;border:none;
+    border-bottom: 1px solid #aaa;
+    color: #222;
+    font-weight: bold;
+}
+.ui-dialog .ui-dialog-buttonpane { border:0}
+.ui-dialog { border:1px solid #c2c2c2}
+.ui-button-text-only .ui-button-text{padding:0.2em 1em}
+.ui-dialog .ui-dialog-buttonpane button { cursor: pointer;margin: 0.5em 0.4em -0.1em 0;}
+.ui-widget-overlay{ background:#000;opacity:0.7}

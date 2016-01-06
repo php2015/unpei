@@ -1,0 +1,98 @@
+.customer{ width:465px}
+.kjdh_cd li{background:url(../images/kjnav2.png) no-repeat;}
+/*首页*/
+.spcx_info{ padding:19px 15px}
+.spcx_info p{ margin-top:15px} 
+.ycbf{ height:210px; }
+.sjcx_info{ padding:50.5px 15px}
+.sjcx_info a{ font-size:14px; text-decoration:underline; }
+.sjcx_sj{ width:80px; text-align:center; float:left; padding:0 8px}
+.sjcx_sj img{ border:1px solid #d8d8d8}
+.shujcx_info{ padding:0}
+.dom-display .normal{display:none;}
+.dom-display{ padding:16.5px 22px}
+.dom-display  p{ margin-top:10px;}
+.dom-display2 p,.dom-display4 p,.dom-display6 p{ margin-top:5px}
+.dom-display2{padding:10px 35px}
+.dom-display3{padding:15.5px 40px}
+.dom-display4{padding:8px 40px}
+.dom-display5{padding:14.5px 40px}
+.dom-display6{padding:9.5px 35px}
+.dom-display .select{ width:133px;}
+
+
+/*采购管理*/
+.cggl_content1a{ padding:10px 20px}
+.cggl_content2 .cggl_add{ background-position:0px -3px}
+.cggl_content2 .cggl_del{ background-position:0px -62px}
+.mbx2 a{color:#fff}
+/*服务管理*/
+
+.fwgl_content1a{ padding:10px 20px}
+.fwgl_content2 .fwgl_add{ background-position:0px -3px}
+.fwgl_content2 .fwgl_editor{ background-position:0px -33px}
+.fwgl_content2 .fwgl_del{ background-position:0px -62px}
+.fwgl_content2 .fwgl_czxx{ background-position:0px -92px}
+.fwgl_content2 .fwgl_clxx{ background-position:0px -122px}
+/*商家查询*/
+.shjcx_content1{ height:95px}
+.shjcx_content1a{ padding:15px 20px}
+.mbx2{ height:28px; line-height:28px; background:#153a71;}
+.mbx2 span{ color:#fff; font-weight:bold; letter-spacing:1px}
+
+/*数据查询*/
+.sjcx_content2_info{ padding:15px; width:855px; margin:0 auto}
+.sjcx_add{ height:30px; line-height:30px}
+.sjcx_add span a{ color:#0165bd} 
+.sjcx_jg{ width:655px}
+.sjcx_content2_info1a,.sjcx_jg table{ width:665px; border:1px solid #c8d4e4}
+
+.sjcx_content2_info2a{ border:1px solid #c8d2de}
+.sjcx_content2_info2a1{ padding:5px; width:160px }
+.sjcx_content2_info2a1 img{ border:1px  solid #ededed}
+.spmc{ height:25px; line-height:25px; color:#0164bf}
+.spjg{ color:#ec7813; font-weight:bold}
+.cxjg{ width:665px}
+.sjcx_content2_info1a_xq{  width:180px; border:1px solid #c6d1e3; display:none}
+.sjcx_content2_info1a_xq h2{ font-weight:bold; padding-top:15px; padding-bottom:10px; padding-left:10px}
+.sjcx_content2_info1a_xq p{ height:auto; line-height:20px; padding-left:10px }
+.sjcx_content2_info1a_xq p a{ color:#0164bf}
+.sjcx_cxxx{ width:300px;  border:1px solid #c5d2e2; padding:10px; margin-bottom:10px}
+.sjcx_cxxx p{ height:auto; line-height:24px}
+
+/*营销管理*/
+.yxgl_content2 .yxgl_add{ background-position:0px -3px}
+.yxgl_content2 .yxgl_del{ background-position:0px -62px}
+.yxgl_content2 .yxgl_editor{ background-position:0px -33px}
+.yxgl_content2 .yxgl_pldr{ background-position:0px -181px}
+
+/*会员中心*/
+.hyzx_lm{ width:190px; background:url(../../images/hyzx_bg.png) repeat-x; border:1px solid #c4d1e1; height:33px; line-height:33px;}
+
+.hyzx_content2a_yc{ height:600px; background:#fff; width:30px; text-align:center; }
+.hyzx_lm .xzyc{text-indent: 23px;background: url(../../images/tubiao2.png) no-repeat  0px -56px;
+ margin-right:5px; cursor:pointer }
+.hyzx_lm .xzyc1{background:url(../../images/xiangyouzhankai.png) no-repeat center;width:20px; text-align:center; cursor:pointer; height:33px; border:1px solid red }
+.hyzx_lm_info{border:1px solid #c4d1e1; background:#fff; height:550px ; border-top:none; width:190px}
+.section{ list-style:none; background:url(../../images/tubiao2.png) no-repeat; background-position:-4px -149px; text-indent:2em;  height:25px; line-height:25px;cursor:pointer}
+.section_current{ background-color:#95adcf;}
+.member li.member_current{background:url(../../images/ren.png) no-repeat #95adcf 45px 0px;color:#fff}
+.sqzk,.section{display:block; float:left}
+.sqzk{ background:url(../../images/sqzk.png) no-repeat 0px 7px;  margin-left:10px; width:10px; height:25px; cursor:pointer}
+.sqzk_current{background:url(../../images/sqzk.png) no-repeat -33px -22px; }
+.section_current .section{ color:#fff}
+.member{margin-top:5px}
+.member li{list-style:none; background:url(../../images/ren.png) no-repeat 45px 0px; text-indent:5.5em;  height:25px; line-height:25px;cursor:pointer}
+.hyzx_content2b{width:683px}
+.hyzx_lm2{ background:url(../../images/hyzx_bg.png) repeat-x; border:1px solid #c4d1e1; height:33px; line-height:33px;}
+.hyzx_lm2_info{ border:1px solid #c4d1e1; background:#fff; height:550px ; border-top:none}
+.bmxx_info{ padding:20px 60px; }
+.name{display:inline-block; margin-left:5px; width:134px}
+.editor{display:none}
+.xjd2{background: url(../../images/tubiao2.png) no-repeat;background-position: 0px 5px;text-indent: 2em;display: block;height: 35px;line-height: 35px;width: 80px;margin-left:10px; cursor:pointer; }
+span.hyzx_editor{background-position:0px -33px; display:inline-block; float:right; padding-right:20px; margin-top:10px}
+.ygxx_info p{ height:30px}
+.bmxx_info p{ margin-bottom:10px}
+.bmxx_info select{ width:133px}
+.ygxx_info{padding:20px 60px;display:none}
+.ygxx_info p{ margin-bottom:10px}

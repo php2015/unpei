@@ -1,0 +1,89 @@
+<style>
+    
+.submit_else {
+    background: url("<?php echo F::themeUrl().'/images/jpd/submit_else.png'?>") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    color:blue;
+    /*cursor: pointer;*/
+    font-size: 14px;
+    height: 30px;
+    line-height: 28px;
+    width: 83px;
+}
+    #Inquirylist .pager{
+        display:none
+    }
+    #dealerlist{
+        margin-bottom: -2px
+    }
+    .txxx {
+        border-bottom: 1px solid #c9d5e3;
+        color: #f27300;
+        font-size: 14px;
+        font-weight: bold;
+        height: 35px;
+        line-height: 35px;
+        text-indent: 15px;
+    }
+    .descript_lms{
+        /*border-bottom: 1px solid #ebebeb;*/  
+        margin-top: 20px
+    }
+    .descript_lms li {
+        float: left;
+        line-height: 30px;
+        margin-left: 70px;
+        width: 90%;
+    }
+    #Inquirylist{
+        margin: 20px 0 30px 0 
+    }
+    .xlcxx li {
+        float: left;
+        line-height: 30px;
+        margin-left: 70px;
+        width: 30%;
+    }
+    .xlcxx li {
+        float: left;
+        line-height: 30px;
+        margin-left: 70px;
+        width: 30%;
+    }
+    .foreachdiv {
+        background: none repeat scroll 0 0 #EFF4FA;
+        border: 1px solid #c5d2e2;
+    }
+
+    .zdycss {
+        background: none repeat scroll 0 0 #fff;
+        height:auto;border: 2px solid #0164c1;margin:0px 5px 10px 5px
+    }
+
+    .zdycss2 {
+        background: none repeat scroll 0 0 #fff;
+        height:auto;border: 2px solid #FF0000;margin:0px 5px 10px 5px
+    }
+
+    .fangan {
+        background: url('<?php echo Yii::app()->theme->baseUrl; ?>/images/images/sanjiao.png') no-repeat;
+        background-position:20px 26px;
+        color: #0065bf;
+        font-size: 14px;
+        font-weight: bold;
+        height: 35px;
+        line-height: 35px;
+        text-indent: 15px;
+    }
+
+    .xjdinfo{border-bottom: 1px solid #ebebeb;padding-bottom:10px}
+    #lms_csss ul li{
+        list-style:disc
+    }
+      #lms_csss ol li{
+        list-style:decimal
+    }
+    #goodslist .pager{
+       display: none 
+    }
+</style>

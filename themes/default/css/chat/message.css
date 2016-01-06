@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,h1,h2,h3,h4,h5,h6,p,br,form,input,button,textarea,select,fieldset,blockquote,ul,ol,li,dl,dt,dd,pre,spang,i,em{margin:0;padding:0; list-style:none; font-style:normal; font-size:12px;}
+a{ text-decoration:none}
+.fl{ float:left;}
+.fr{ float:right;}
+
+
+.icons{ width:238px; height:42px; background:url(../../images/chat/noreget.png) -2px 0px no-repeat; position:fixed; right:12px; bottom:92px;}
+/*.icon em{ display:none;}
+.icon .msgs{ display:none;}*/
+.on{ background:url(../../images/chat/icon_03.png) no-repeat;}
+.on em{ display:block; cursor:pointer; width:226px; height:42px; line-height:42px; color:#f27300; text-align:right; font-size:16px; position:absolute; z-index:90;}
+.on .msgs{ display:block; width:25px; height:22px; position:absolute; right:40px; top:10px;}
+.noline{ opacity:0.4;filter:alpha(opacity=40);}
+
+/*弹出框*/
+.i_mian{ width:600px; min-height:100px; padding:9px; background:url(../../images/chat/bj.png) no-repeat; position:absolute; bottom:-9px; right:-9px; display:none; z-index: 99;}
+/*联系人列表*/
+.i_mian .contacts{ width:170px; /*height:405px;*/ float:left; background:url(../../images/chat/l-bj.png) right repeat-y;}
+.contacts h2{ width:158px; height:40px; padding-left:12px; background:url(../../images/chat/t-bj.png) right repeat-y;}
+.contacts h2 input{ float:left; border:none; width:122px; height:38px; padding-left:4px; background:url(../../images/chat/s-bj.png) 0px 26px no-repeat; color:#FFF;}
+#search{ border:none; width:32px; height:40px; background:url(../../images/chat/search.png) 4px 10px no-repeat; cursor:pointer;}
+.contacts ul{ height:325px;}
+.contacts li{ width:144px; height:30px; padding:10px; cursor:pointer;}
+.contacts li a{ float:left; height:30px; line-height:30px; padding-left:10px; width:74px; overflow:hidden;}
+.contacts li.active{ background:#d7d7d7; color:#f27300; border-left:2px solid #f27300;}
+
+.i_mian li span{ float:left; width:30px; height:30px;}
+.i_mian li i{ float:right; width:30px; height:30px; background:url(../../images/chat/mess.png) 5px 5px no-repeat; color:#fff; text-align:center; line-height:30px; font-size:14px;}
+
+.contacts h3{ height:24px; width:167px; padding:8px 0px; background:#e6d8ca;}
+.contacts h3 a{ color:#888; height:24px; line-height:24px; padding:0px 20px 0px 10px;}
+.contacts h3 img{ width:auto; height:auto;}
+/*消息框*/
+.m_m{ width:429px; float:left; padding-left:1px;}
+.m_m h2{ height:40px; width:408px; line-height:40px; padding-left:20px;}
+.m_m h2 a{ font-size:16px; color:#fff;}
+.m_m h2 ul{ float:right;}
+.m_m h2 li{ width:22px; height:22px; padding:9px; float:left; cursor:pointer;}
+.m_m h2 li.add{ background:url(../../images/chat/add.png) 9px 9px no-repeat;} 
+.m_m h2 li.show{ background:url(../../images/chat/mtion.png) 9px 9px no-repeat;}
+.m_m h2 li.close{ background:url(../../images/chat/close.png) 9px 9px no-repeat;}
+/*更多消息*/
+.m_h{ width:100%; height:24px; background:#fac799;}
+.m_h p{ width:390px; text-align:center; height:24px; line-height:24px; color:#f59136; padding-right:0px; text-indent:30px;}
+.m_h i{ width:30px; height:24px; background:url(../../images/chat/x.png) 10px 6px no-repeat; cursor:pointer;}
+/*消息主题*/
+.messages{ width:100%;}
+.messages li{ padding-left:10px; padding-top:10px; width:406px;}
+.messages ul.mine li span{ float:right;}
+.bj{ margin-left:30px;}
+
+.send{ width:100%; height:40px; background:#ffefe0;}
+.send input{ float:left; border:none; width:285px; height:40px; padding-left:20px; background:url(../../images/chat/send.png) 18px 30px no-repeat; line-height:40px;}
+.send ul{ float:right;}
+.send li{ width:40px; height:40px; float:left; cursor:pointer; text-align:center; line-height:40px; color:#fff;}
+.send li.sd {background:url(../../images/chat/sd.png) 0px 9px no-repeat;}
+.send li.see{ background:url(../../images/chat/see.png) 12px 9px no-repeat;}
+.send li.pho{ background:url(../../images/chat/pho.png) 9px 9px no-repeat;}
+.allmsg .headimg img{ display:inline-block; border:none; border-radius:30px; width:30px; height:30px;}
+
+
+
+

@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+.main1{ width:883px; min-height:230px; border:1px solid #c5d2e2; background:#fff;padding-bottom:10px}
+.main1 h3{ height:33px;border-bottom:1px solid #c5d2e2; background:#f6f6f6; font-size:14px; font-weight:bold; color:#f27300; line-height:33px; text-indent:14px; margin-bottom:10px;}
+.infor1{ width:423px; min-height:175px; border:1px solid #fbdeb2; margin-left:10px;}
+.infor1{ float: left;margin: 0 10px; }
+.fl dt{float:left;margin-right: 10px;}
+.fr dd{float:left;margin-left: 10px;}
+.infor2{float: left;}
+.infor1 h4{height:28px; background:#fffae6 url(../images/icon1.jpg) 5px center no-repeat;font-size:14px; font-weight:bold; color:#000; line-height:28px; text-indent:42px;}
+.infor1 dl{ width:315px; height:103px; margin-top:24px; margin-left:16px;}
+.infor1 dl dt img{ width:97px; height:97px;}
+.infor1 dl dd{ min-width:196px;}
+.infor1 dl dd img{width:15px; height:13px; margin-right:2px;}
+.infor1 dl dd p{ margin-bottom:20px}
+.infor1 dl dd p b:hover{color:#f27300; cursor:pointer}
+.infor1 dl dd span{ width:100px; height:10px; background:#dee2e3; display:inline-block}
+.infor1 dl dd span b{ width:95%; height:10px; background:#fd9937; display:inline-block;}
+.infor2{ width:423px; min-height:175px; border:1px solid #fbdeb2; margin-right:10px;}
+.infor2 .intitle{height:30px; background:#fffae6;line-height:30px;}
+.intitle h4{font-size:14px; font-weight:bold; color:#000;  text-indent:15px;}
+.intitle h4 b{ font-size:12px; color:#0164c1}
+.intitle span{ margin-right:12px;}
+.intitle span i{ font-style:normal; color:#F00}
+.infor2 p{ width:423px; height:29px; border-bottom:1px solid #fbdeb2; line-height:29px;}
+.infor2 p.last{ border-bottom:0px}
+.infor2 p.ititle{ position:relative}
+
+.infor2 p b{ width:85px; text-align:center; display:inline-block}
+.infor2 p .c1{ width:110px;}
+.infor2 p.imain b{ font-weight:normal}
+
+.main2{ width:883px; height:980px; margin-top:9px;border:1px solid #c5d2e2; background:#fff;position:relative}
+.main2 .main2t{width:883px; height:44px; border-bottom:2px solid #c9d5e3;}
+.main2 .main2t li{ float:left; width:160px; height:44px;cursor:pointer; line-height:44px; font-size:14px; font-weight:bold; color:#000;  text-align:center; background:url(../images/line.jpg) right center no-repeat}
+.main2 .main2t li.main2on{ color:#f36d01; border-bottom:2px solid #f36d01}
+.main2 .main2t li:hover{color:#f27300; }
+
+.comme1{ width:857px;position:relative; margin-left:10px; }
+.comme1 li.comme1t{width:857px;height:33px; border:1px solid #dadada;background:#fafafa; line-height:32px;}
+.comme1 li b{ font-weight:normal; display:inline-block}
+.comme1 li b i{ font-style:normal; color:#999}
+.comme1 li .c1{ width:75px; text-align:center}
+.comme1 li .c2{ width:282px;}
+.comme1 li .c3{ width:277px}
+.comme1 li .c4{ width:163px;cursor:pointer;}
+.comme1 li .c4 p:hover{color:#f27300;}
+.comme1 li.comme1t b{font-weight:bold}
+.comme1 li.comme1t .c2{ text-indent:28px;}
+.comme1 li.comme1t .c3{ text-indent:8px;}
+.comme1 li.comme1c p{ line-height:25px;}
+.comme1 li.comme1c .c3{ margin-top:16px;}
+.comme1 li.comme1c .c1{ position:relative;top:-35px;}
+.comme1 li.comme1c .c2{ width:268px;position:relative;top:-30px;margin-left:14px;}
+.comme1 li.comme1c .c3 i{ color:#f36d01}
+.comme1 li.comme1c .c4{ position:relative;top:-20px;}
+.comme1 li.comme1c{ border-bottom:1px solid #d5d5d5}
+.comme1 li.comme1c .c4 img{ margin-right:2px;width:15px; height:13px;}
+
+.tmains{ margin-top:10px;}
+.tmains li.comme1c{ padding:2px 0 25px 0;}
+.tmains li .c1{text-align:left}
+.tmains li.comme1t .c1{ text-indent:15px;}
+.tmains li.comme1t .c2{ text-indent:25px;}
+.tmains li.comme1t .c3{ text-indent:0px;}
+.tmains li.comme1c .c1{ text-indent:5px; position:relative; top:-8px}
+.tmains li.comme1c .c2{ position:relative; top:10px}
+.tmains li.comme1c .c3{ position:relative; top:-20px}
+.tmains li.comme1c .c4{ position:relative; top:0px}
+.tmains li.comme1c .c4 img{ margin-right:2px;width:15px; height:13px;}
+.tmains li .c2{  text-align:center}
+.tmains li .c3{text-align:center;}
+.paging{ position:absolute; right:0px; bottom:20px;}
+
+/*进度条样式*/
+.eval_jdtbg{background:#e1e1e1;width:100px;height:10px;float:left;margin: 3px 8px 0 0;}
+.eval_jdtmid{background:url(../../images/papmall/evalmid.png) repeat-x;height:10px;float:left}
+.eval_jdtleft{background:url(../../images/papmall/evalleft.png) no-repeat;height:10px;float:left;width:5px}
+.eval_jdtright{background:url(../../images/papmall/evalright.png) no-repeat;height:10px;float:left;width:5px}
+
+/*增加的样式*/
+.flimg{width:90px;height:90px}
+.eval_table{padding:0 10px 10px 10px;}
+.eval_table th{font-weight:bold}
+.eval_table th,.eval_table td{vertical-align: middle;}
+.goods_eval1,.goods_eval2{text-align:left;padding-left:20px;height:auto;word-break:break-all}
+.goods_eval1 a{border:1px solid #dcdcdc;width: 82px;height: 82px;text-align: center;display: table-cell;vertical-align: middle;}
+.goods_eval1 a img{max-width: 82px;max-height: 82px;}
+.goods_eval2{text-indent:10px}
+.goods_eval3{text-align:left;padding-left:30px;height:auto;width:200px;overflow:hidden;}
+.goods_eval3 a{color:#f47202}
+.goods_time{color:#666}
+.goods_num{padding-right:20px;;overflow:hidden;display:block;float:left}
+.goods_num a{color:#888;}
+.goods_name_input{color:#ccc}
+.eval_organ{width:110px;margin:0 auto;text-align:center;word-break:break-all}
+.title_lm li a{font-size:14px}
+.title_lm li.current a{color:#f47202}

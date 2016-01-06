@@ -1,0 +1,688 @@
+<?php
+
+/*
+ * 经销商-商品管理
+ */
+
+class DealergoodsController extends Controller {
+    /*
+     * 销售中商品列表
+     */
+
+    public function actionIndex() {
+        $this->pageTitle = Yii::app()->name . '-' . "销售中商品";
+        $_GET['IsSale'] = 1;
+        $model = DealergoodsService::papgetgoods();
+        $count = $this->Saleprocount();
+        $this->render('index', array('data' => $model['model']["dataProvider"], 'count' => $count, 'cartext' => $model['car']));
+    }
+
+    /*
+     * 下架中商品
+     */
+
+    public function actionDrop() {
+        $this->pageTitle = Yii::app()->name . '-' . "下架商品";
+        $_GET['IsSale'] = 0;
+        $model = DealergoodsService::papgetgoods();
+        $count = $this->Dropprocount();
+        $organID = Yii::app()->user->getOrganID();
+        $sqlmid = "select distinct(MakeID) from {{dealer_vehicles}} where OrganID=" . $organID;
+        $makeID = Yii::app()->jpdb->createCommand($sqlmid)->queryAll();
+        $this->render('dropgoods', array('data' => $model['model']["dataProvider"], 'count' => $count, 'cartext' => $model['car'], 'make' => $makeID));
+    }
+
+    /*
+     * 商品发布-显示
+     * 第一步
+     * 选择配件类别
+     */
+
+    public function actionAddinfo1() {
+        $organID = Yii::app()->user->getOrganID();
+        $sqlmid = "select distinct(MakeID) from {{dealer_vehicles}} where OrganID=" . $organID;
+        $makeID = Yii::app()->jpdb->createCommand($sqlmid)->queryAll();
+        $this->pageTitle = Yii::app()->name . '-' . "发布商品";
+        $this->render('addinfo1', array('make' => $makeID));
+    }
+
+    /*
+     * 商品发布-显示 
+     * 第二步
+     * 详细数据填写
+     */
+
+    public function actionAddinfo2() {
+//        header("Expires:Mon,26 Jul 1970 05:00:00 GMT");
+//        header("Last-Modified:" . gmdate("D,d M Y H:i:s") . "GMT");
+//        header("Cache-control:no-cache,no-store,must-revalidate");
+//        header("Pragma:no-cache");
+//        header("Expires:0");
+//        VehicleService::queryGoodsMakeself();
+        $this->pageTitle = Yii::app()->name . '-' . "发布商品";
+        $StandCode['bigname'] = Yii::app()->request->getParam('bigname');
+        $StandCode['subname'] = Yii::app()->request->getParam('subname');
+        $StandCode['cpname'] = Yii::app()->request->getParam('cpname');
+        $StandCode['code'] = Yii::app()->request->getParam('code');
+        $StandCode['bignameid'] = Yii::app()->request->getParam('bignameid');
+        $StandCode['subnameid'] = Yii::app()->request->getParam('subnameid');
+        $this->render('addinfo2', array('StandCode' => $StandCode));
+    }
+
+    /*
+     * 商品发布 保存
+     */
+
+    public function actionAdd() {
+        $this->pageTitle = Yii::app()->name . '-' . "发布商品";
+//        Yii::app()->request->getParam('id');
+
+        $organID = Yii::app()->user->getOrganID();
+        if ($_POST) {
+            $data['Name'] = trim($_POST['Name']);
+            if (trim($_POST['Pinyin']) == "") {
+                $pinyin = F::Pinyin1($_POST['Name']); // 如果未输入拼音则自动添加拼音
+            } else {
+                $pinyin = trim($_POST['Pinyin']);
+            }
+            $data['IsSale'] = 1; //商品默认上架
+            $data['Pinyin'] = $pinyin;
+            $data['GoodsNO'] = trim($_POST['GoodsNO']);     // 商品编号
+            //$data['OENO'] = trim($_POST['OENO']);
+            if ($_POST['OENOS'][0]) {
+                $data['OENO'] = $_POST['OENOS'][0];
+            } else {
+                $data['OENO'] = trim($_POST['OENO']);
+            }
+            $data['PartsLevel'] = trim($_POST['PartsLevel']);
+            $data['Memo'] = trim($_POST['Memo']);
+            $data['Price'] = trim($_POST['Price']);
+            if (!empty($_POST['goodsBrand'])) {
+                $data['BrandID'] = trim($_POST['goodsBrand']);    // id
+//                $data['Brand'] = trim($_POST['BrandName']);    // 名称
+            }
+            $data['StandCode'] = $_POST['StandCode'];           // 标准名称txt
+//            $goodsspec['JiapartsNO'] = $data['BrandID']; // 加配号
+            $data['Info'] = $_POST['Info'];
+            $data['Provenance'] = $_POST['Provenance'];
+            $model = new PapGoods();
+            $model->attributes = $data;
+            $oenos = $_POST['OENOS'] ? $_POST['OENOS'] : $_POST['OENO'];
+            if ($oenos) {
+                foreach ($oenos as $value) {
+                    $oe .=$value . ' ';
+                }
+            } else {
+                $oe = '';
+            }
+//            $make_hidden = explode(',', $_POST["make_hidden"]);
+//            $make_hidden = array_unique($make_hidden);
+//            $make_hidden = array_filter($make_hidden);
+//            $make_hidden = implode(',', $make_hidden);
+//            $model->Title = $data['Name'] .' '.$data['GoodsNO']. ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $make_hidden;
+            $model->Title = $data['Name'] . ' ' . $data['GoodsNO'] . ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $_POST['cpname'];
+//            $model->Title = $data['Name'] . ' ' . $pinyin . ' ' . $data['Brand'];
+            $model->OrganID = $organID;
+            $model->Version = time();
+            $model->CreateTime = time();
+            $model->UpdateTime = time();
+            $model->VehVersion = time();
+//            if ($this->Isexist($data['GoodsNO'])) {  // 添加
+            if ($model->save()) {
+                //得到刚插入数据库的商品Id
+                $pid = $model->attributes['ID'];
+                $version = $model->attributes;
+                $versiontime = $model->attributes['Version'];
+                // 把主营车系添加到商品车系关系表
+                if ($_POST["make"]) {
+                    DealergoodsService::addvehiclegoods($pid, $organID, $versiontime);
+                }
+                // 把OENO号添加到关系表里
+                if ($_POST['OENOS']) {
+                    $version['oeno'] = DealergoodsService::addoegoods($pid, $organID);
+                }
+                // 添加商品图片
+                if ($_POST['urlimg']) {
+                    $version['img'] = DealergoodsService::addimggoods($pid, $organID);
+                }
+                // 添加商品属性
+                $version['spec'] = DealergoodsService::addspecgoods($pid);
+                // 添加商品包装
+                $version['pack'] = DealergoodsService::addpackgoods($pid);
+                //添加商品版本信息
+//                $Goodsarr = array(
+//                    'GoodsID' => $pid,
+//                    'GoodsInfo' => $version,
+//                    'Version' => $versiontime,
+//                    'VehVersion' => $versiontime,
+//                );
+//                Yii::app()->mongodb->getDbInstance()->goods_version->insert($Goodsarr);
+                DealergoodsService::addverredis($pid);
+                $goodsnew = DealergoodsService::newgoodsxinfo($pid);
+                DealergoodsService::addgoodslog($goodsnew);
+                $rs = array('success' => 1, 'errorMsg' => '保存数据成功', 'status' => 'add');
+            } else {
+                $rs = array('success' => 0, 'errorMsg' => '保存数据失败', 'status' => 'add');
+            }
+//            } else {
+//                $rs = array('success' => 0, 'errorMsg' => '商品编号已存在，请修改！', 'status' => 'add');
+//            }
+        }
+        $this->render('addresult', array('result' => $rs));
+    }
+
+    /*
+     * 商品发布 保存草稿
+     */
+
+    public function actionAdddrop() {
+        $this->pageTitle = Yii::app()->name . '-' . "发布商品";
+//        Yii::app()->request->getParam('id');
+
+        $organID = Yii::app()->user->getOrganID();
+        if ($_POST) {
+            $data['Name'] = trim($_POST['Name']);
+            if (trim($_POST['Pinyin']) == "") {
+                $pinyin = F::Pinyin1($_POST['Name']); // 如果未输入拼音则自动添加拼音
+            } else {
+                $pinyin = trim($_POST['Pinyin']);
+            }
+            $data['IsSale'] = 0; //商品默认不上架
+            $data['Pinyin'] = $pinyin;
+            $data['GoodsNO'] = trim($_POST['GoodsNO']);     // 商品编号
+            //$data['OENO'] = trim($_POST['OENO']);
+            if ($_POST['OENOS'][0]) {
+                $data['OENO'] = $_POST['OENOS'][0];
+            } else {
+                $data['OENO'] = trim($_POST['OENO']);
+            }
+            $data['PartsLevel'] = trim($_POST['PartsLevel']);
+            $data['Memo'] = trim($_POST['Memo']);
+            $data['Price'] = trim($_POST['Price']);
+            if (!empty($_POST['goodsBrand'])) {
+                $data['BrandID'] = trim($_POST['goodsBrand']);    // id
+//                $data['Brand'] = trim($_POST['BrandName']);    // 名称
+            }
+            $data['StandCode'] = $_POST['StandCode'];           // 标准名称txt
+//            $goodsspec['JiapartsNO'] = $data['BrandID']; // 加配号
+            $data['Info'] = $_POST['Info'];
+            $data['Provenance'] = $_POST['Provenance'];
+            $model = new PapGoods();
+            $model->attributes = $data;
+            $oenos = $_POST['OENOS'] ? $_POST['OENOS'] : $_POST['OENO'];
+            if ($oenos) {
+                foreach ($oenos as $value) {
+                    $oe .=$value . ' ';
+                }
+            } else {
+                $oe = '';
+            }
+//            $make_hidden = explode(',', $_POST["make_hidden"]);
+//            $make_hidden = array_unique($make_hidden);
+//            $make_hidden = array_filter($make_hidden);
+//            $make_hidden = implode(',', $make_hidden);
+//            $model->Title = $data['Name'] .' '.$data['GoodsNO']. ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $make_hidden;
+            $model->Title = $data['Name'] . ' ' . $data['GoodsNO'] . ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $_POST['cpname'];
+//            $model->Title = $data['Name'] . ' ' . $pinyin . ' ' . $data['Brand'];
+            $model->OrganID = $organID;
+            $model->OrganID = $organID;
+            $UpdateTime = $model->CreateTime = time();
+//            if ($this->Isexist($data['GoodsNO'])) {  // 添加
+            if ($model->save()) {
+                //得到刚插入数据库的商品Id
+                $pid = $model->attributes['ID'];
+                // 把主营车系添加到商品车系关系表
+                if ($_POST["make"]) {
+                    DealergoodsService::addvehiclegoods($pid, $organID, $UpdateTime);
+                }
+                // 把OENO号添加到关系表里
+                if ($_POST['OENOS']) {
+                    DealergoodsService::addoegoods($pid, $organID);
+                }
+                // 添加商品图片
+                if ($_POST['urlimg']) {
+                    DealergoodsService::addimggoods($pid, $organID);
+                }
+                // 添加商品属性
+                DealergoodsService::addspecgoods($pid);
+                // 添加商品包装
+                DealergoodsService::addpackgoods($pid);
+                $goodsnew = DealergoodsService::newgoodsxinfo($pid);
+                DealergoodsService::addgoodslog($goodsnew);
+                $rs = array('success' => 1, 'errorMsg' => '保存数据成功');
+            } else {
+                $rs = array('success' => 0, 'errorMsg' => '保存数据失败');
+            }
+//            } else {
+//                $rs = array('success' => 0, 'errorMsg' => '商品编号已存在，请修改！');
+//            }
+        }
+        $this->render('addresult', array('result' => $rs));
+    }
+
+    /*
+     * 商品修改 保存
+     */
+
+    public function actionSave() {
+        $this->pageTitle = Yii::app()->name . '-' . "修改商品";
+        $organID = Yii::app()->user->getOrganID();
+        $goodsID = $_POST['GoodsID'];
+        if ($_POST) {
+            $data['Name'] = trim($_POST['Name']);
+            if (trim($_POST['Pinyin']) == "") {
+                $pinyin = F::Pinyin1($_POST['Name']); // 如果未输入拼音则自动添加拼音
+            } else {
+                $pinyin = trim($_POST['Pinyin']);
+            }
+            $data['IsSale'] = 0; //商品默认不上架
+            $data['Pinyin'] = $pinyin;
+            $data['GoodsNO'] = trim($_POST['GoodsNO']);     // 商品编号
+            //$data['OENO'] = trim($_POST['OENO']);
+            $data['PartsLevel'] = trim($_POST['PartsLevel']);
+            $data['Memo'] = trim($_POST['Memo']);
+            $data['Price'] = trim($_POST['Price']);
+            if (!empty($_POST['goodsBrand'])) {
+                $data['BrandID'] = trim($_POST['goodsBrand']);    // id
+//                $data['Brand'] = trim($_POST['BrandName']);    // 名称
+            }
+            $data['StandCode'] = $_POST['StandCode'];           // 标准名称txt
+//            $goodsspec['JiapartsNO'] = $data['BrandID']; // 加配号
+            $data['Info'] = $_POST['Info'];
+            $data['Provenance'] = $_POST['Provenance'];
+            $model = PapGoods::model()->findByPk($goodsID);
+            $model->attributes = $data;
+            $oenos = $_POST['OENOS'] ? $_POST['OENOS'] : $_POST['OENO'];
+            if ($oenos) {
+                foreach ($oenos as $value) {
+                    $oe .=$value . ' ';
+                }
+            } else {
+                $oe = '';
+            }
+//            $make_hidden = explode(',', $_POST["make_hidden"]);
+//            $make_hidden = array_unique($make_hidden);
+//            $make_hidden = array_filter($make_hidden);
+//            $make_hidden = implode(',', $make_hidden);
+//            $model->Title = $data['Name'] .' '.$data['GoodsNO']. ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $make_hidden;
+            $model->Title = $data['Name'] . ' ' . $data['GoodsNO'] . ' ' . $pinyin . ' ' . $data['Brand'] . ' ' . $oe . ' ' . $_POST['cpname'];
+//            $model->Title = $data['Name'] . ' ' . $pinyin . ' ' . $data['Brand'];
+            // $model->CreateTime = time();
+            $edtitime = $model->UpdateTime = time();
+//            if ($this->Isexist(trim($_POST['GoodsNO']), $goodsID)) {  // 修改
+//            $model->save();
+//            
+//            var_dump($model->errors);
+//            exit;
+            $goodsold = DealergoodsService::newgoodsxinfo($goodsID);
+            if ($model->save()) {
+                // 把主营车系添加到商品车系关系表
+                if ($_POST["make"]) {
+                    DealergoodsService::addvehiclegoods($goodsID, $organID, $edtitime);
+                }
+                // 把OENO号添加到关系表里
+                if ($_POST['OENOS']) {
+                    DealergoodsService::addoegoods($goodsID, $organID);
+                }
+                // 添加商品图片
+                if ($_POST['urlimg'] || $_POST['delimg']) {
+                    DealergoodsService::addimggoods($goodsID, $organID);
+                }
+                // 添加商品属性
+                DealergoodsService::addspecgoods($goodsID);
+                // 添加商品包装
+                DealergoodsService::addpackgoods($goodsID);
+                $goodsnew = DealergoodsService::newgoodsxinfo($goodsID);
+                $edit = DealergoodsService::goodsversion($goodsnew, $goodsold);
+                DealergoodsService::editgoodslog($edit);
+                $rs = array('success' => 1, 'errorMsg' => '修改数据成功', 'status' => 'save');
+            } else {
+                foreach ($model->errors as $key => $value) {
+                    if ($key == 0)
+                        $errorMsg = $value['0'];
+                }
+                $rs = array('success' => 0, 'errorMsg' => $errorMsg, 'status' => 'save');
+            }
+//            } else {
+//                $rs = array('success' => 0, 'errorMsg' => '商品编号已存在，请修改！', 'status' => 'save');
+//            }
+        }
+        $this->render('saveresult', array('result' => $rs));
+    }
+
+    /*
+     * 商品管理-修改
+     */
+
+    public function actionEdit() {
+        $this->pageTitle = Yii::app()->name . '-' . "修改商品";
+        $ID = Yii::app()->request->getParam('goodsid');
+        if (Yii::app()->request->getParam('Version')) {
+            $Version = Yii::app()->request->getParam('Version');
+            $GoodsID = Yii::app()->request->getParam('GoodsID');
+//            $Goodsinfo = PapGoods::model()->findBypk($GoodsID);
+            $data = DealergoodsService::getmongoversion($GoodsID, $Version, 'haveveh');
+            $this->render('versionedit', array('data' => $data['GoodsInfo']));
+        } else {
+            $this->render('edit', array('data' => DealergoodsService::editgetgoods($ID), 'status' => 'edit'));
+        }
+    }
+
+    /**
+     * 判断商品编号是否存在
+     */
+    private function Isexist($goodsNo, $id = 0) {
+        $organID = Yii::app()->user->getOrganID();
+        if ($id == 0) { // 添加
+            $model = PapGoods::model()->findAll("GoodsNO= '{$goodsNo}' and OrganID= $organID");
+            if (count($model) > 0) {   // 大于0 则已存在
+                return false;
+            } else {                  // 可以添加
+                return true;
+            }
+        } else {    // 修改
+            $model = PapGoods::model()->findAll("ID !=" . $id . " AND GoodsNO='{$goodsNo}' and OrganID= $organID and ISdelete=1");
+            if (count($model) > 0) {   // 大于0 则已存在
+                return false;
+            } else {                  // 可以添加
+                return true;
+            }
+        }
+    }
+
+    /*
+     * 删除OE号
+     */
+
+    public function actionDeletegoodsoe() {
+        $model = DealergoodsService::deloegoods();
+        echo json_decode($model);
+    }
+
+    /*
+     * 删除单个适用车系
+     */
+
+    public function actionDeletevehicle() {
+        $model = DealergoodsService::delvehiclegoods();
+        echo json_decode($model);
+    }
+
+    /*
+     * 删除整个适用车系
+     */
+
+    public function actionDeletecar() {
+        $model = DealergoodsService::delvehiclesgoods();
+        echo json_encode($model);
+    }
+
+    /*
+     * 删除图片
+     */
+
+    public function actionDeleteimg() {
+        $imageName = $_GET['xximage'];
+//        $targetFile = Yii::app()->params['uploadPath'] . $imageName;
+        $sql = "delete from pap_goods_image_relation where ImageUrl= '$imageName' ";
+        $bools = Yii::app()->papdb->createCommand($sql)->execute();
+        $bool = false;
+        if ($bools) {
+//            $path = $imageName;
+//            $mpath = strtr($imageName, 'A', 'M'); //缩略小图url
+//            $bpath = strtr($imageName, 'A', 'B'); //原图url
+//            $ftp = new Ftp();
+//            $bool = $ftp->delete_file($path);
+//            $bool = $ftp->delete_file($mpath);
+//            $bool = $ftp->delete_file($bpath);
+//            $ftp->close();
+            echo json_encode($bool);
+            exit();
+        } else {
+            echo json_encode($bool);
+            exit;
+        }
+    }
+
+    /**
+     * 获取拼音代码
+     */
+    public function actionGetpinyin() {
+        $name = $_GET['name'];
+        $pinyin = F::pinyin1($name);
+        if ($pinyin) {
+            echo json_encode($pinyin);
+        } else {
+            echo '';
+        }
+    }
+
+    /*
+     * 商品列表
+     */
+
+    public function actionGoodslist() {
+        exit;
+    }
+
+    /*
+     * 计算上架商品数量
+     */
+
+    private function Saleprocount() {
+        $progoods = DealergoodsService::getsaleprocount();
+        return $progoods;
+    }
+
+    /*
+     * 计算下架商品数量
+     */
+
+    private function Dropprocount() {
+        $progoods = DealergoodsService::getdropprocount();
+        return $progoods;
+    }
+
+    /*
+     * 商品下架
+     */
+
+    public function actiondropgoods() {
+        $ID = Yii::app()->request->getParam('id');
+        $IDs = explode(',', $ID);
+        foreach ($IDs as $value) {
+            if ($value) {
+                $goodsold[$value] = DealergoodsService::newgoodsxinfo($value);
+            }
+        }
+        $result = DealergoodsService::editsalegoods('0');
+        foreach ($IDs as $value) {
+            if ($value) {
+                $goodsnew[$value] = DealergoodsService::newgoodsxinfo($value);
+                $edit = DealergoodsService::goodsversion($goodsnew[$value], $goodsold[$value]);
+                DealergoodsService::editgoodslog($edit);
+            }
+        }
+        if ($result['bool']) {
+            $result = array('success' => 0, 'name' => $result['name']);
+        } else {
+            $result = array('success' => 1);
+        }
+        echo json_encode($result);
+    }
+
+    /*
+     * 商品上架
+     */
+
+    public function actiontopgoods() {
+        $ID = Yii::app()->request->getParam('id');
+        $IDs = explode(',', $ID);
+        foreach ($IDs as $value) {
+            if ($value) {
+                $goodsold[$value] = DealergoodsService::newgoodsxinfo($value);
+            }
+        }
+        $result = DealergoodsService::editsalegoods('1');
+        foreach ($IDs as $value) {
+            if ($value) {
+                $goodsnew[$value] = DealergoodsService::newgoodsxinfo($value);
+                $edit = DealergoodsService::goodsversion($goodsnew[$value], $goodsold[$value]);
+                DealergoodsService::editgoodslog($edit);
+            }
+        }
+        //商品上架-生成版本
+        foreach ($IDs as $value) {
+            if ($value) {
+                DealergoodsService::addversiongoods($value);
+            }
+        }
+        if ($result['bool']) {
+            $result = array('success' => 0, 'name' => $result['name']);
+        } else {
+            $result = array('success' => 1);
+        }
+        echo json_encode($result);
+    }
+
+    /*
+     * 永久删除
+     */
+
+    public function actionYjdelete() {
+
+        $result = DealergoodsService::yjdeloegoods();
+        if ($result['bool']) {
+            $result = array('success' => 0, 'name' => $result['name']);
+        } else {
+            $result = array('success' => 1);
+        }
+        echo json_encode($result);
+    }
+
+    /*
+     * 获取适用车系
+     */
+
+    public function actionGetyearmodel() {
+        $Car = $_GET['carID'];
+        $Year = $_GET['Year'];
+        if ($Year == '请选择年款') {
+            $sql = "select ModelID,Name,EName,Year,MakeID,SeriesID from jpd_front_model where  SeriesID = {$Car}";
+            $model = Yii::app()->jpdb->createCommand($sql)->queryAll();
+        } else {
+            $sql = "select ModelID,Name,EName,Year,MakeID,SeriesID from jpd_front_model where SeriesID = {$Car} and Year='" . $Year . "'";
+            $model = Yii::app()->jpdb->createCommand($sql)->queryAll();
+        }
+        foreach ($model as $key => $value) {
+            $rs[$key]['Model'] = $value['ModelID'];
+            $rs[$key]['Modeltxt'] = $value['Name'];
+            $rs[$key]['Year'] = $value['Year'];
+            $rs[$key]['Make'] = $value['MakeID'];
+            $rs[$key]['Car'] = $value['SeriesID'];
+        }
+        echo json_encode($rs);
+    }
+
+    /*
+     * 商品添加 预览
+     */
+
+    public function actionPreview() {
+        $this->pageTitle = Yii::app()->name . '-' . "商品预览";
+        $this->layout = '//layouts/papmall';
+        if (!$_POST) {
+            $this->redirect('Addinfo1');
+        }
+        $result = $_POST;
+        $urlimg = explode(',^', $_POST['urlimg']);
+        foreach ($urlimg as $k => $value) {
+            if ($value) {//去掉初始值0
+                $addimg = explode(';', $value); //根据分号拆分，得到图片的相关信息
+                $result['Images'][] = $addimg[0]; //图片url
+            }
+        }
+
+        $result['make'] = explode(',', $_POST["make"]);
+        $result['car'] = explode(',', $_POST["car"]);
+        $result['year'] = explode(',', $_POST["year"]);
+        $result['model'] = explode(',', $_POST["model"]);
+        $result['maketxt'] = explode(',', $_POST["maketxt"]);
+        $result['cartxt'] = explode(',', $_POST["cartxt"]);
+        $result['modeltxt'] = explode(',', $_POST["modeltxt"]);
+//        $data = MallService::getEvaluateID($goodsid);
+//        $this->render('preview', array('r' => $result, 'data' => $data));
+        $this->render('preview', array('r' => $result));
+    }
+
+    /*
+     * 商品详情页
+     */
+
+    public function actionGoodsinfo() {
+        $this->pageTitle = Yii::app()->name . '-' . "商品详情";
+        $ID = Yii::app()->request->getParam('goods');
+        if (Yii::app()->request->getParam('Version')) {
+            $Version = Yii::app()->request->getParam('Version');
+            $GoodsID = Yii::app()->request->getParam('GoodsID');
+//            $Goodsinfo = PapGoods::model()->findBypk($GoodsID);
+            $data = DealergoodsService::getmongoversion($GoodsID, $Version, 'haveveh');
+            $this->render('versioninfo', array('data' => $data['GoodsInfo']));
+        } else {
+            $this->render('edit', array('data' => DealergoodsService::editgetgoods($ID), 'status' => 'info'));
+        }
+    }
+
+    //获取经销商主营分类
+    public function Getmaincate($organID) {
+        $big = JpdOrganCpname::model()->findAll('OrganID=:org', array(':org' => $organID));
+        foreach ($big as $k => $v) {
+            $childs[$k] = $v->attributes;
+            $cri = new CDbCriteria(array(
+                        'condition' => 'ParentID =' . $v[BigpartsID] . ' and IsShow=1',
+                        'order' => 'SortOrder asc',
+                    ));
+            $sub = Gcategory::model()->findAll($cri);
+            $childs[$k]['children'] = $sub;
+        }
+        return $childs;
+    }
+
+    //比较版本
+    public function actionHaveversion() {
+        $GoodsID = Yii::app()->request->getParam('GoodsID');
+        $Goodsinfo = PapGoods::model()->findBypk($GoodsID);
+        if ($Goodsinfo->attributes['Version']) {
+            $arr['edit'] = DealergoodsService::goodseditinfo($GoodsID, $Goodsinfo->attributes['Version'], $Goodsinfo->attributes['VehVersion']);
+            //组装返回值
+            $arr['empty'] = 0;
+        } else {
+            $arr['empty'] = 1;
+        }
+        echo json_encode($arr);
+    }
+
+    public function actionUpdatemongodb() {
+        $type = Yii::app()->request->getParam('type');
+        //        //修改商品版本数据
+        if ($type == 1) {
+            DealergoodsService::UpdateMdbgoodsversion();
+        }
+        //        //修改商品日志数据
+        if ($type == 2) {
+
+            DealergoodsService::UpdateMdbgoodslog();
+        }
+        if ($type == 3) {
+            //        //修改车系版本数据
+            DealergoodsService::UpdateMdbvehcleversion();
+        }
+        if ($type == 4) {
+            //        //修改商品日志数据
+            DealergoodsService::UpdateMdbvehclelog();
+        }
+    }
+
+}
+
+?>

@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+.allmsg{ width:981px; height:518px; padding:10px; margin:20px auto; }
+/*左边栏*/
+.c_list{ width:240px; height:518px; background:url(../../images/chat/l-bj.png) right repeat-y; float:left;}
+h2{ width:228px; height:40px; padding-left:12px; background:url(../../images/chat/t-bj.png) right repeat-y;}
+input{ width:190px; float:left; border:none; height:38px; padding-left:4px; color:#FFF; background:url(../../images/chat/alls-bj.png) 0px 30px no-repeat;}
+.c_list ul.all_nav{ width:220px;/* border:#f27300 1px solid;*/ margin:14px auto;border-bottom: 1px solid #f27300}
+.c_list ul.all_nav li{ cursor:pointer;color:#f27300;font-weight: bold;line-height: 25px;}
+.c_list ul.all_nav li.on{ background:#f2d7bd; color:#f27300;}
+
+.nav_one{ width:240px; height:400px; overflow-x:hidden;}
+ul.good li{ width:212px; height:30px; padding:10px; padding-right:0px;cursor: pointer}
+ul.good li a{ float:left; height:30px; line-height:30px; padding-left:10px;}
+ul.good li.active{ background:#d7d7d7; color:#f27300; border-left:2px solid #f27300;}
+ul.good li span{ float:left; width:30px; height:30px;}
+/*右边栏历史记录*/
+.history{ width:740px; height:518px; background:#fff;  float:left; position:relative;}
+.history h3{ width:740px; height:40px; background:#f69d4c; text-align:right; line-height:40px;}
+.history h3 i{ float:left; color:#F5F5F5; font-family:'微软雅黑'; font-size:14px; padding-left:20px;}
+.history h3 i span{ font-size:16px; color:#fff;}
+.history h3 a.w_set{ padding:9px;}
+
+.bj{ width:448px;  float:left; margin-left:0px; margin-top:10px;}
+.mbj{ width:448px; float:left; margin-top:10px;}
+.history .somebody{ width:740px; height:438px; overflow-x:hidden;}
+.history .messages{ width:720px; height:auto;}
+/*.history .messages .headimg img{ width:40px; height:40px; border-radius:40px;}*/
+.history .messages ul{ width:640px; margin:2px auto;}
+.history .messages li{ width:630px; min-height:60px;}
+.history .messages .mbj{ margin-left:120px;}
+.history .messages li span{ float:left; width:40px; height:60px;}
+.history .messages .time{ width:740px; height:30px; line-height:30px; text-align:center; padding:0px; background:url(../../images/chat/timerline.png) 0px 14px no-repeat;}
+.history .messages .time i{ font-size:14px;}
+.history .msend{ width:100%; height:40px; background:#ffefe0;}
+.history .msend .bigsend{ color:#000; width:447px; background:url(../../images/chat/bigsend.png) no-repeat 18px 30px; float:left; padding:0px 20px;}
+.history .msend #tim{ width:100px; color:#000; padding-left:10px; border:1px solid #ccc;}
+
+
+
+
+
+

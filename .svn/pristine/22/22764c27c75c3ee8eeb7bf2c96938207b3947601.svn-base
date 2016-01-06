@@ -1,0 +1,35 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+.onlineMenu{ border:3px solid #ff881a}
+/* online */
+#online_qq_tab a,.onlineMenu h3,.onlineMenu li.tli,.newpage{background:url(../images/float_cs1.png) no-repeat;}
+
+
+#online_qq_layer{z-index:9999;position:fixed;right:0px;top:150px}
+*html,*html body{background-image:url(about:blank);background-attachment:fixed;}
+*html #online_qq_layer{position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+
+#online_qq_tab{width:28px;float:left;margin:44px 0 0 0;position:relative;z-index:9;}
+#online_qq_tab a{display:block;height:120px;line-height:999em;overflow:hidden;}
+#online_qq_tab a#floatShow{background-position:-30px -373px;}
+#online_qq_tab a#floatHide{background-position:0 -373px;}
+
+#onlineService{display:inline;margin-left:-1px;float:left;width:130px;display:none;background-position:0 0;}
+.onlineMenu{background-position:-262px 0;background-repeat:repeat-y;padding:0 13px;background:#fff}
+.onlineMenu h3{height:36px;line-height:999em;overflow:hidden;border-bottom:dashed 1px #ccc;}
+.onlineMenu h3.tQQ{background-position:0 10px;}
+.onlineMenu h3.tele{background-position:0 -40px;}
+.onlineMenu li{height:36px;line-height:36px;text-align:center;}
+.onlineMenu .tel li{text-align:left}
+.onlineMenu li.tli{padding:0 0 0 28px;font-size:12px;text-align:left;}
+.onlineMenu li.zixun{background-position:0px -131px;}
+.onlineMenu li.fufei{background-position:0px -190px;}
+.onlineMenu li.phone{background-position:0px -244px;}
+.onlineMenu li a.newpage{display:block;height:36px;line-height:999em;overflow:hidden;background-position:5px -100px;}
+.onlineMenu li img{margin:8px 0 0 0;}
+.onlineMenu li.last{border:0;}
+.qq li{ background:url(../images/qq.png) no-repeat 5px 8px;border-bottom:1px dashed #ccc;}
+.qq li a{ color:#555; font-size:12px; text-decoration:none}
+.tel li{background:none; color:#555; font-size:14px}
+.dztj_info .tj_img img{*margin-top:0px}
+.sp_mbx{ border-bottom:1px dashed #ccc}

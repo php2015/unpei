@@ -1,0 +1,49 @@
+
+*{padding:0; margin:0}
+body{ background:url(../../images/login/login_bg.jpg) repeat-x; width:auto; margin:0 auto; color:#343434}
+a{ text-decoration:none; }
+.header,.contents,.info{ margin:0 auto; width:960px}
+.header{height:70px; background:url(../../images/login/head_bg.png) no-repeat;}
+.contents{background:url(../../images/login/demo2.jpg) no-repeat center; height:425px; position:relative}
+.login{position:absolute; right:15px; top:15px; background:url(../../images/login/login.png) no-repeat; width:380px; height:419px}
+.logo{float:left; height:70px; }
+.logo img{ padding:15px 0px}
+.help{float:right; line-height:70px}
+.help span a{padding:0 10px; color:#343434; font-size: 12px;}
+.help span{border-right:1px solid #343434; margin:0}
+.user{margin:80px 30px 10px 30px}
+.leabl{font-size:14px; font-family:"微软雅黑"; }
+.input{background:#f5f6f7; border:1px solid #e9e9ea; border-radius: 2px;height:28px; width:200px; outline:none;  line-height:28px}
+.m-top15{margin-top:15px}
+.checkbox{ height:15px; width:15px; border:1px solid #e9e9ea; background:#fff; vertical-align:middle}
+.width80{width:80px}
+.m_left20{margin-left:20px}
+.m_left18{margin-left:19px}
+.button{ background:url(../../images/login/login-button.png) no-repeat;width:277px; height:36px; border:none; cursor:pointer}
+.adv{ background:url(../../images/login/1.jpg) no-repeat left top; height:53px;}
+.advantage{float:left; width:225px; font-family:"微软雅黑"; font-size:14px ; color:#666; height:90px; padding:10px 0px  10px}
+.link{ float:left; margin-top:-10px}
+.link div{ height:80px; border-right:1px solid #d0d5d9;cursor:pointer; background:url(../../images/login/1.jpg) no-repeat; width:240px}
+.link div.service{ background-position:center -75px}
+.link div.union{ background-position:center -180px}
+.link div.jiapei{ background-position:center -282px; border:none}
+.float_l{float:left}
+.float_r{float:right}
+.footer{ text-align:center; background:#253a59; width:100%}
+.footer{ height:85px}
+.footer_info{  line-height:24px; text-align:center;color:#888; padding-top:10px; font-size:12px}
+.footer_info a{  color:#888; padding-right:5px; font-size:12px}
+.footer_info a:hover{color:#0063be}
+
+.footer .last{ border:none}
+.submit {background: url("../../images/jpd/submit.png") no-repeat scroll 0 0;border: medium none;color: #fff;cursor: pointer;font-size: 14px;height: 30px;line-height: 28px;width: 83px;}
+input{ height:22px ; line-height:25px; border:1px solid #ccc; background:url(../../images/jpd/input-bg.png) repeat-x; margin-left: 5px; padding-left:5px; color:#656565}
+
+.cm_info_head li{list-style: none;font-size: 14px;font-weight: bold;color:#999;float:left; width:33%;text-align: center;line-height: 30px;height:30px;
+                  background:url('../../images/login/sx.png') no-repeat 54px -2px;
+  }
+  .cm_info_head {margin:0 auto;width:80%;position:relative;z-index:2;margin-top:10px}
+  .cm_info_head li.cm_li_sen{background-position:43px -56px}
+  .cm_info_head li.cm_current{background-position:43px -106px;border-bottom:2px solid #0264bf;color:#0264bf}
+  .cm_info_head li.cm_li_three{background-position:19px -165px}
+    .cm_info_head li.cm_selected{border-bottom:2px solid #0264bf;color:#0264bf}

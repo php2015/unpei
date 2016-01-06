@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+html,body,div,h1,h2,h3,h4,h5,h6,p,br,form,input,button,textarea,select,fieldset,blockquote,ul,ol,li,dl,dt,dd,pre,spang,i,em{margin:0;padding:0; list-style:none; font-style:normal; font-size:12px; font-family:'微软雅黑';}
+h1,h2,h3,h4,h5,h6{ font-weight:500;}
+a{ text-decoration:none}
+.fl{ float:left;}
+.fr{ float:right;}
+img{ display:inline-block; border:none;}
+.clear{ clear:both;}
+
+.chose_new{ width:100%; height:100%; position:fixed; z-index:98;}
+/*主体*/
+.cs_main{ width:700px; min-height:455px; background:#ececec; position:relative; box-shadow: 0px 0px 12px #111; padding-bottom:6px; border-radius:6px;}
+/*关闭按钮*/
+.clo{ width:40px; height:40px; position:absolute; right:-16px; top:-16px;}
+
+/*屏蔽div*/
+.shield{ width:478px; height:82px; position:absolute; left:223px; top:41px; z-index:99; opacity:0; filter:alpha(opacity=0);}
+
+/*头部*/
+.cs_nav{ width:700px; height:40px; border-bottom:1px solid #c8c8c8; background:#f2e6da; border-top-left-radius:6px;}
+.cs_nav p{ width:144px; height:40px; text-align:center; float:left; line-height:40px; font-size:14px; background:url(../../images/car/CarIcon.png) 10px center no-repeat;}
+.cs_main .cs_nav ul{ float:right;}
+.cs_nav li{ float:left; height:40px; line-height:40px; padding-right:10px;}
+.cs_nav li a{ color:#666; padding:2px 10px 2px 20px;}
+.cs_nav li a.how{ background:url(../../images/car/tit_icon.png) 0px -30px no-repeat; border-right:1px solid #666;}
+.cs_nav li a.non{ background:url(../../images/car/tit_icon.png) 0px -94px no-repeat;}
+
+.cs_nav li a:hover{ color:#f27300;}
+.cs_nav li a.how:hover{ background:url(../../images/car/tit_icon.png) 0px 2px no-repeat;}
+.cs_nav li a.non:hover{ background:url(../../images/car/tit_icon.png) 0px -62px no-repeat;}
+
+/*导航ul*/
+.cs_main ul{ float:left;}
+.cnav li{ float:left; height:82px; width:138px; text-align:center; background:url(../../images/car/bline.png) center bottom no-repeat; font-size:16px;}
+.cs_main li.fz1{ width:42px; height:74px; background:url(../../images/car/bleftline.png) no-repeat left bottom;}
+.cs_main li.fz2{ width:42px; height:74px; background:url(../../images/car/brightline.png) no-repeat right bottom;}
+.cnav li.click{ background:url(../../images/car/clickline.png) center bottom no-repeat; color:#f27300;width: 160px;}
+.cnav li{ cursor:pointer; line-height:78px;width: 138px;}
+
+.c_m_main{ width:700px; min-height:300px; position:relative; margin:20px auto 0px;*z-index:99;}
+.car{ width:700px; min-height:300px;}
+.c_m_main h2{ height:30px; padding: 0px 18px; width:664px; background:#fff; line-height:30px; font-size:14px; font-family:'宋体'; font-weight:500;}
+.c_m_main h2 a{ display:inline-block; width:30px; height:30px; line-height:30px; text-align:center; font-size:14px; font-family:'微软雅黑'; cursor:pointer; color:#666;}
+.c_m_main h2 a.on{ background:#666; color:#fff;}
+
+/*car*/
+.car .i2{ display:none;}
+.car .i3{ display:none;}
+.car h2 em{ float:left; width:76px; font-size:14px;}
+.car h2 i{ float:left; height:30px; line-height:30px; padding-left:6px; background:#666; font-size:14px; margin-right:10px; cursor:pointer;}
+.car h2 i a{font-size:14px; float:left; height:30px; line-height:30px; width:auto; color:#fff;}
+.car h2 i span{ display:inline-block; width:33px; height:30px; background:url(../../images/car/X.png) right no-repeat;}
+/*car1*/
+.car1{ display:block;}
+.car a{ font-size:14px;}
+.car1 ul{ padding:15px 20px;}
+.car li{ float:left; width:148px; height:43px; border:1px solid #dedede; margin:5px; background:#fff; cursor:pointer; font-size:14px;}
+.car1 img{ height:32px; max-width:65px;}
+
+.car1 li i{ float:left; width:73px; height:32px; text-align:center; padding-top:5px;}
+.car1 li a{ float:right; width:74px; height:43px; font-size:14px; display:table; *position:relative; overflow:hidden;}
+.car1 li a span{ display:table-cell; vertical-align:middle; font-size:14px; *position:absolute; *top:50%;}
+.car1 li a span em{ *position:relative; *top:-50%;*left:-1%; font-size:14px;}
+.car li.onclick{ background:url(../../images/car/bt-bg.png) right -1px bottom -1px no-repeat; color:#f27300; border-color:#f27300;}
+
+/*car2*/
+.car2{ display:none; *padding-bottom:5px;}
+.car2 p{ height:16px; width:120px; margin-left:34px; margin-top:18px; line-height:16px; font-size:16px; padding-left:4px; border-left:2px solid #666; color:#666;}
+.car2 ul{ padding:5px 10px 5px 30px; *width:640px;}
+.car2 li{ text-align:center; line-height:28px; height:28px;width:148px;}
+/*car3*/
+.car3{ display:none;}
+.car3 ul{ padding:15px 20px;}
+.car3 li{ text-align:center; line-height:43px;}
+.car form{width:98px; height:32px; margin:0px auto;}
+.car input{ border:none; width:98px; height:32px; color:#fff; background:#f27300; border-radius:5px; font-size:14px; cursor:pointer;}
+/*car4*/
+.car4{ display:none; position:relative;z-index: 100;}
+.car4 ul{ padding:15px 20px;}
+.car4 li{ text-align:center; display:table; *position:relative; overflow:hidden;}
+.car4 li i{line-height: 20px; display:table-cell; vertical-align:middle; font-size:14px; *position:absolute; *top:50%;}
+.car4 li i em{ *position:relative; *top:-50%;*left:-50%; font-size:14px;}
+.poshow{ width:146px; height:35px; padding-left:8px; font-size:14px; position:absolute; left:277px; bottom: -19px; background:url(../../images/car/photo.png) 1px 0px no-repeat; line-height:36px; text-align:center; cursor:pointer;}
+.ps{ background:url(../../images/car/ps.png) 1px 0px no-repeat;}
+.poshow p{ font-size:14px; position:relative; left:0px; top:0px;}
+.play{ width:664px; height:362px; position:absolute; left: 18px; bottom:22px; display:none;z-index: 101;}
+.play span{ position:absolute; display:block; width:26px; height:20px; left:0px; bottom: -24px; font-size:14px; z-index:1000;}
+.play span i{ font-size:14px;}
+.play span em{ font-size:14px;}
+.play a.prev{ display:none; width:40px; height:137px; background:url(../../images/car/left.png) right center no-repeat; position:absolute; left:0px; top:112px; opacity:0.4; filter:alpha(opacity=40); z-index:104;}
+.play a.next{ display:none; width:40px; height:137px; background:url(../../images/car/right.png) left 0px no-repeat; position:absolute; right:0px; top:112px; z-index:104;min-height:0px;}
+.play .image{ width:664px; height:362px; position:absolute; padding:0px; margin:0px; z-index:103;overflow:hidden;}
+.play .image ul{position:absolute; left:-2px ; padding:0px; margin:0px;z-index: 101;}
+.play .image li{ float:left; width:666px; height:362px; padding:0px; margin:0px; border:none; cursor:auto;}
+
+
+
+
+

@@ -1,0 +1,6 @@
+.subway-item{ width:33.0%; border:1px solid #c9c8c9; height:293px;}
+.subway-item:hover{ background:#f1f1f1}
+.subway-item-top img{ margin:20px 38px 0px}
+.subway-item-bottom{ margin:0px 35px 25px}
+.bl_no{ border-left:none}
+.subway-item-bottom span a{ color:#4096ee; text-decoration:underline;}

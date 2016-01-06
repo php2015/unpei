@@ -1,0 +1,8 @@
+2015/03/17 15:07:01 [info] [order] 2015-03-17 15:07:01   尊敬的武汉测试汽配经销商客户,星星修理厂向您下了一笔待付款的订单,订单号为：DD1507540393!
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (167)
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (101)
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (390)
+2015/03/17 15:07:01 [info] [order] 2015-03-17 15:07:01   {"code":"-2","SMS":"\u5609\u914d\u5173\u95ed\u77ed\u4fe1\u63d0\u9192"}
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (168)
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (101)
+in E:\ware\wamp\www\unipei1.0.6\protected\modules\pap\services\RemindService.php (390)

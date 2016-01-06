@@ -1,0 +1,1 @@
+<?php$this->pageTitle = Yii::app()->name . ' - ' . $page->Title;$this->breadcrumbs = array(    '帮助中心' => array('/page/helpcenter'),    $page->Title,);?><div class="pageWrap">    <?php echo $page->Content ?></div>

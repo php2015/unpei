@@ -1,0 +1,48 @@
+/*服务支持样式表*/
+.support{border: 1px orange solid;padding: 10px 5px;}
+.support_search{margin:5px 0px;}
+.support_data{margin:10px 0px;}
+.data_name{width:70px;text-align: right;}
+//.mbx {height: 30px;line-height: 30px;background: orange;}
+
+/*配件信息表格样式*/
+.parts-info thead tr{height:28px;background:#EAB265;
+    background: -moz-linear-gradient(top, #F1DAAE, #EAB265);
+    background: -webkit-linear-gradient(top, #F1DAAE, #EAB265);  /* Safari Chrome */
+    background: -ms-linear-gradient(top, #F1DAAE, #EAB265);   /* IE */
+    background: -o-linear-gradient(top, #F1DAAE, #EAB265);}
+.parts-info thead tr td{text-align: center; height:28px; color:#764928; font-weight:bold}
+.content2d{background: #fff;}
+.w124{ width:124px} 
+table.center td{ text-align: center;vertical-align: middle;}
+table.center thead tr{ background:#ececec}
+table.center tr{  border-bottom:none}
+#addparts-form .input{ border: 1px solid #ccc;width:138px;margin-left: 5px;}
+#addparts-form .input1 {border: 1px solid #fea8a7;}
+#addparts-form .w100{ width:100px}
+#addparts-form .w150{width:150px}
+#addparts-form .w75{width:75px}
+table.center .add-tr{border:none}
+
+//搜索框自动补全样式
+.bigautocomplete_layout{display:none;background-color:#FFFFFF;border:1px solid #ccc;position:absolute!important;z-index:100;max-height:220px;overflow-x:hidden;overflow-y:auto; }
+.bigautocomplete_layout table{border-collapse:collapse;border-spacing:0;background:none repeat scroll 0 0 #FFFFFF;width:100%;cursor:default;}
+.bigautocomplete_layout table tr{background:none repeat scroll 0 0 #FFFFFF; height:20px;line-height: 14px;cursor: pointer}
+.bigautocomplete_layout .ct{background:none repeat scroll 0 0 #f0f0f0 !important;}
+.bigautocomplete_layout .ct div{color:#ec8051}
+.bigautocomplete_layout div{word-wrap:break-word;word-break:break-all;padding:4px; }
+.support_search{ position: relative}
+.bigautocomplete_layout table tbody td{line-height:14px}
+.m_left48{ margin-left:48px}
+.m_left30{ margin-left:30px}
+.m_left36{ margin-left:36px}
+.m_left15{ margin-left:15px}
+/*p.support_search .input{ border: 1px solid #ccc;width:138px;margin-left: 5px;}
+p.support_data .input{ border: 1px solid #ccc;width:126px;margin-left: 5px;}*/
+p.support_data input.w267{width:267px}
+.djw-tr{ background:#ffefe0}
+table.parts-info .djw-tr{ border-bottom:1px solid #fdbb81;}
+.w270{ width:270px}
+.partname{ border-left:1px solid #c5d2e2}
+
+.search_name{text-align: right;width:70px; display: inline-block}

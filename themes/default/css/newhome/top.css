@@ -1,0 +1,76 @@
+.head-nav-info ul li{padding-left:10px;}
+.standname li{width:130px; height: 24px}
+.pop #make-car-mall {left: 27%!important;top:126px!important;color:#DEDEDC!important}
+#make-car-mall,#make-car-m {border:2px solid #f2b303;}
+.right_A .makelist li.selected3{ background:#f2b303 }
+.right_A .makelist ul li.li_list:hover{background:#f2b303}
+.right_A .makelist ul li.li_top{color:#f2b303}
+.car_brand .left_A ul li a{color:#f2b303}
+.car_brand .left_A ul li a:hover { background:#f2b303}
+.bigautocomplete-layout{position:absolute;z-index: 100; width:253px !important; top: 34.5px !important; left: 0.5px !important;border:solid 1px #f27607;background: #fff;cursor: pointer}
+.noread{ color:#0164c1}
+.info-cons{ text-indent:0px}
+.a-hover:hover{color:#f27300}
+.w600{ width:600px}
+.m_left205{ margin-left:205px}
+.system{ display:none}
+.padding20{ padding:10px 20px 10px}
+.f14{ font-size:14px}
+.cont .checkbox{ margin-right:5px}
+.bor-bottom{ border-bottom:1px  dashed #868686; width:500px; margin-left:20px}
+.save-btn{ background:url(../images/save-btn.png) no-repeat; width:60px; height:28px; border:none; cursor:pointer}
+.w790{ width:790px}
+li.xiaoxi{ background:none; position: relative;width:120px;top:17px; z-index: 6; height: 25px; line-height: 25px; text-indent: 25px}
+div.xiaoxi{ border:1px solid #f6f6f6; z-index:5; background:url(../../images/shophome/head-tubiao2.png) no-repeat 1px 1px; position: absolute; *left:0px;width:100%}
+/*div.xiaoxi:hover{ border:1px solid #ccc; background:url(../../images/shophome/head-tubiao2.png) #fff no-repeat 0px 0px;border-bottom:none; z-index:2}*/
+li.helpcontact{background:none; position: relative;width:85px; background: none; margin-left:2px}
+div.helpcontact{ border:1px solid #f6f6f6; position:absolute; z-index:5; background:url(../../images/shophome/qq.png) no-repeat 1px 2px; width: 100%;position: absolute; *left:0px}
+/*div.helpcontact:hover{border:1px solid #ccc; position:relative; z-index:5; background:url(../../images/shophome/qq.png) #fff no-repeat 5px 2px; border-bottom:none}*/
+.name-customer{ background:url(../../images/shophome/head-tubiao.png) no-repeat -5px -222px; width:100px;margin-left:10px; border:1px solid #f6f6f6; cursor:pointer; line-height:30px; margin-top:13px; text-indent:5px;}
+.name-customer:hover{border:1px solid #ccc;background:url(../../images/shophome/head-tubiao.png) #fff no-repeat -5px -222px;box-shadow:2px 2px 2px -1px #ccc;}
+.name-customer-info{position:absolute; *left:11px;*top:45px;border:1px solid #ccc; background:#fff;width:100px; margin-top:-1px;  margin-left:-1px;box-shadow:2px 3px 2px -1px #ccc; display:none}
+.name-customer-info li:hover{  background:#d0d0d0}
+.name-customer-info li.layout a{ color:#f07400}
+.pop-up{ position:absolute;top:25px;*left:0px;*top:25px; width:250px; border:1px solid #ccc; background:#fff; text-indent:10px; margin-left:0px; z-index:1; margin-top:0px; display:none}
+.pop-up dt{ width:80px; color:#666}
+.pop-up dl{ margin-left:10px}
+.pop-up dl span{ color:#ef7400}
+.sys-xiaoxi{ text-decoration:underline}
+.head-help li a.xiaoxi-more{ border:none; color:#f07400}
+.helpcontact_d{position:absolute;top:25px;*left:0px;*top:25px; width:221px; border:1px solid #ccc; background:#fff; text-indent:10px; margin-left:0px; z-index:1; margin-top:0px; display:none;}
+.helpcontact_ul { padding-bottom:10px}
+.hrd{border-bottom:1px dashed #ccc; height: 1px;*margin-top:10px }
+.helpcontact_ul li{ float: left; width:100px; background: none; text-indent: 0px; margin-top:10px; height: 20px; margin-left: 5px}
+.helpcontact_ul li img{ width: 15px; height: 15px; margin-top: 2px}
+.helpcontact_ul li a{ display: inline-block; height: 20px; width: 60px; margin-left: 5px;background:url(../../images/shophome/qqbg.png) no-repeat; padding-right: 0; line-height: 20px; padding:0px 2px; text-align: center; color:#f27300}
+.fwtime{ line-height: 30px;text-indent:20px; color:#666}
+.datagrid-mask {
+    z-index:102;
+    background: none repeat scroll 0 0 #000;
+    display: none;
+    height: 100%;
+    left: 0;
+    filter:alpha(opacity=80);        -moz-opacity:0.8;        -khtml-opacity: 0.8;        opacity: 0.8;  
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.datagrid-masks {
+    z-index:102;
+    background: none repeat scroll 0 0 #000;
+    display: none;
+    height: 100%;
+    left: 0;
+    filter:alpha(opacity=80);        -moz-opacity:0.8;        -khtml-opacity: 0.8;        opacity: 0.8;  
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.search-bd table{  margin:0; padding:2px}
+.search-bd table tr{  height:22px; line-height:22px}
+.search-bd table td{ font-size:12px; line-height:20px; border-bottom:1px solid #ebebeb ;text-align:left;width:245px}
+.search-bd table-hd{ font-size:14px; background:#e6874d; }
+.search-bd table td div{text-align:left}
+.search-bd table-hd td{ font-weight:bold; font-size:14px;color:#fff}
+li.xiaoxi .pop-up  a{ border-right:none}
+.text-nav-info ul li.sj{background:#fac9a1;box-shadow: 1px 0 4px #ccc; color: #764928;}

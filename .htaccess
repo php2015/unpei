@@ -1,0 +1,19 @@
+Options +FollowSymLinks -Indexes
+IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !=/favicon.ico
+RewriteCond %{REQUEST_URI} !^/themes/default/css/about:blank
+#RewriteCond %{REQUEST_URI} !^/upload/
+#RewriteCond %{REQUEST_URI} !^/themes/
+
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+# when 403 output blank replace of Forbiden info
+ErrorDocument 403 " "
+

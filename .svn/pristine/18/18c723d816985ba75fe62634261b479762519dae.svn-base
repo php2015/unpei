@@ -1,0 +1,52 @@
+   .contents{ margin:0 auto 10px}
+    .box-step{ height:56px; line-height:56px; border:1px solid #d7d7d7; background:url(../../images/helpcenter/lm-bg2.jpg) repeat-x}
+    .step{ width:200px; border-right:1px dashed #d7d7d7; height:56px; line-height:56px; color:#808080; font-weight:bold; text-indent:80px; font-size:14px}
+    .step1{ width:235px; text-align:center;font-weight:bold;  font-size:14px;color:#808080}
+    .box-step .current{color:#0266bc}
+    .question-class{ width:210px; height:125px; background:#f2f0f0; margin:5px 40px 15px; border:2px solid #f2f0f0}
+    .question-class div{ background:url(../../images/helpcenter/tubiao2.png) no-repeat; line-height:125px; text-indent:80px; font-size:14px; font-weight:bold; color:#636267}
+    .question-class:hover{ background:#fff; border-color:#0266bc }
+    .question-class:hover div{ color:#0266bc}
+    div.question-info1{ background-position:20px 27px}
+    div.question-info2{ background-position:20px -83px}
+    div.question-info3{ background-position:20px -194px}
+    div.question-info4{ background-position:20px -309px}
+    div.question-info5{ background-position:20px -419px}
+    div.question-info6{ background-position:20px -530px}
+    .editor a{ color:#0266bc; font-size:12px; font-weight:400}
+    .choice-question{color:#0266bc; font-weight:bold }
+    .question{ margin:0px 10px 10px; zoom:1}
+    .question li{ width:30%; float:left; background:url(../../images/helpcenter/tubiao.png) no-repeat 10px -230px; text-indent:25px}
+    .question-info li{ float:left; width:180px; margin:0px auto 10px 10px }
+    .answer{  background:#F5F5F5; margin:10px;  letter-spacing:0.5px}
+    .answer1{ color:#ff8400; line-height:30px}
+    .botton2{width:230px; height:32px; background-position:-84px -162px; vertical-align:middle; margin-left:10px }
+    .add span{ margin-top:5px; margin-left:10px}
+    /*涓婁紶鏍峰紡*/
+    .btn_addPic{
+        display: inline-block;
+        position: relative;
+        height: 30px;
+        width:106px;
+        overflow: hidden;
+        border: 1px solid #EBEBEB;
+        background:url(../../images/helpcenter/tubiao.png) no-repeat -148px -125px;
+        color: #999999;
+        font: 14px/39px 'MicroSoft Yahei','Simhei';
+        cursor: pointer;
+        text-align: center;
+        cursor:pointer; vertical-align:top
+    }
+
+    .filePrew {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 105px;
+        height: 30px;
+        cursor: pointer;
+        opacity: 0;
+        filter:alpha(opacity: 0);
+    }
+

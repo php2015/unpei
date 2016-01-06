@@ -1,0 +1,31 @@
+
+.zxq_fbpl_xx{ height:210px; border-bottom:1px dashed #ccc;font-size:12px; color:#656565}
+.zxq_fbpl_spxx{ margin-top:10px; float:left;  width:120px; margin-left:40px}
+.sp_Pl{ width:108px; height:108px}
+.zxq_plh{ vertical-align:middle; margin-top:0}
+.zxq_fbpl_info{ margin-top:20px}
+.zxq_fbpl_info textarea{ margin-top:10px}
+.zxq_fbpl_xx textarea{ color:#656565}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-table}
+*html .clearfix{height:1%}
+.clearfix{display:block}
+*+html .clearfix{min-height:1%}
+.fl{float:left;}
+
+.gradecon{width:350px;}
+.rev_pro{ margin:30px 0 0 0; padding:0; color:#656565}
+.rev_pro li{line-height:20px;height:20px; list-style:none; font-size:12px; margin-bottom:20px}
+.rev_pro li .revtit{text-align:right;display:block;float:left;margin-right:10px;width:125px;}
+.revinp{float:left;display:inline;}
+/*.level .level_solid,.level .level_hollow{float:left;background-image:url("images/icon2.png");background-repeat:no-repeat;display:inline-block;width:15px;height:15px;}*/
+.level .level_solid{background-position:0px 0px;}
+.level .level_hollow{background-position:-21px 0px;}
+.revgrade{margin-left:20px;}
+.level .level_solid, .level .level_hollow{cursor:pointer;background-image:url("../../images/papeva/star-on-big.png");
+                                          background-repeat: no-repeat;
+                                          display: inline-block;
+                                          float: left;
+                                          height: 24px;
+                                          width: 24px;}

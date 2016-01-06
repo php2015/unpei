@@ -1,0 +1,120 @@
+
+.content_info{ margin:5px; *margin:2px 5px}
+.content1{ width:210px}
+.content2{ margin-left:10px}
+.content2a{ width:768px; border:1px solid #f0f0f0; height:155px}
+.content2c{ border:1px solid #ddd; background:#f7f7f7; height:70px;}
+.content2c1{ height:35px; border-bottom:1px solid #f0f0f0; line-height:35px; font-size:14px} 
+.content2c1 ul li{ float:left; background:#fff; border:1px solid #CECBCE; height:25px; line-height:25px; margin-top:3px; margin-left:5px}
+.paixu{ margin-left:20px}
+.paixu ul li a{ padding:0px 10px}
+.paixu ul li.li_current{background-color:#ec8051; border:1px solid #ec8051} 
+.paixu ul li.li_current_jg{background-color:#ec8051}
+.paixu ul li.li_current a{ color:#fff; font-weight:bold}
+.paixu ul li.li_current_jg a{color:#fff; font-weight:bold; background:url(../../images/papmall/tubiao.png) no-repeat 35px -34px; height:20px; display:block; width:35px}
+.paixu ul li.li_current2_jg a{color:#fff; font-weight:bold; background:url(../../images/papmall/tubiao.png) no-repeat -42px -58px; height:20px; display:block; width:35px}
+/*分页*/
+.fenye{ margin-right:10px; margin:5px}
+.total{ 
+    height: 22px;
+    padding: 2px 15px 2px 0;
+    border-right: 1px solid #E7E3E7;
+    line-height: 22px;
+    font-family: verdana;
+}
+.total span{color:#ff6600;}
+.total b{color:#ff6600;}
+.text{height: 22px;
+      padding: 2px 0px 2px 15px;
+      line-height: 22px;
+      font-family: verdana;}
+.text i{color:#ff6600; font-weight:bold}
+.input{border:1px solid #f0f0f0; background:#fff; height:25px; line-height:25px}
+.content2c2{ height:35px; line-height:35px}
+.button2{ height:25px; line-height:20px; width:45px; border:1px solid #ccc; background:url(../images/button_bg.png) repeat-x; border-top:none}
+.width50{ width:50px}
+
+
+.sp_xianshi{ width:65px}
+.sp_xianshi li{ float:left; border-left:1px solid #f0f0f0 }
+.sp_xianshi li a{display:block; height:34px; width:30px;}
+.hp{background:url(../../images/papmall/btn.png) no-repeat; background-position:3px 10px;}
+.sp{background:url(../../images/papmall/btn.png) no-repeat; background-position:-41px 10px}
+.hp_current{background:url(../../images/papmall/btn.png) no-repeat #fff; background-position:-19px 10px;}
+.sp_current{background:url(../../images/papmall/btn.png) no-repeat #fff; background-position:-63px 10px;}
+
+
+.content2d{ width:768px; margin-top:10px;}
+.content2d li{ width:247px;  float:left; margin-left:8px}
+li.li_sp_last{ border-right:none}
+.sp_info{ margin:0px 5px 10px; padding-top:10px}
+.sp_img{width:220px; height:220px;}
+.sp_img img{ text-align:center; vertical-align:middle;margin:0 auto;*margin-top:-2px;max-width:220px;
+ 　myimg:expression(onload=function(){ 
+　　this.style.width=(this.offsetWidth >220)?"220px":"auto"})}
+.sp_img img{max-height:220px; 
+　　myimg:expression(onload=function(){ 
+　　this.style.height=(this.offsetHeight >220)?"220px":"auto"});}
+.sp_name{ height:30px; overflow:hidden; margin-top:5px; line-height:15px}
+.sp_name a:hover{ text-decoration:underline;}
+.sp_price{ color:#e23a39; font-size:14px ; font-weight:bold; margin-top:5px; font-family:verdana}
+.sp_price span{ font-weight:400;color:#9a999e; text-decoration:line-through}
+
+
+.top_pre,.top_next{ border:1px solid #ccc; padding:4px 5px }
+.top_fenye{ line-height:26px; float:right; cursor:pointer}
+.top_disabled,.top_disabled .fenye_icon{ color:#ccc}
+.fenye_icon{color:#ff6600}
+.manu{padding:3px;margin:3px;text-align:right; margin:30px 0px; }
+.manu a{border:#eee 1px solid;padding:5px 10px;margin:2px;text-decoration:none; font-size:14px; font-family:Verdana, Geneva, sans-serif}
+.manu a:hover{border:#ec8051 1px solid;color:#666;}
+.manu a:active{border:#ec8051 1px solid;color:#666;}
+.manu .current{color:#ec8051; border:1px solid #fff; font-weight:bold}
+.manu .disabled{border:#eee 1px solid; }
+
+
+
+.content2a{ width:210px;}
+.content2a2,.content2a3{width:210px; border:1px solid #ddd}
+p.dnss{ height:30px; line-height:30px; background:#f7f7f7; border-bottom:1px solid #ddd; width:208px; text-indent:10px; font-size:14px ; font-family:"微软雅黑"}
+
+.dnss_info p{ line-height:23px; margin:10px}
+.dnss_info button{ width:50px; height:23px}
+.content2a2,.content2a3{ margin-top:10px}
+.shop_fenlei P{height:25px; line-height:25px; border-bottom:1px solid #ddd; background:#f7f7f7;  text-indent:30px; cursor:pointer;}
+p.shop_fenlei2{ background:url(../../images/papmall/tubiao3.png) #f7f7f7 no-repeat -80px -73px;}
+p.shop_fenlei3{ background:url(../../images/papmall/tubiao3.png) #f7f7f7 no-repeat -12px -97px;}
+.shop_fenlei_info{  width:208px; display:none; border-bottom:1px solid #ddd}
+.shop_fenlei_info ul{ margin:10px}
+.shop_fenlei_info ul li{ line-height:20px}
+.dztj_info{ margin:5px; width:190px; border-bottom:1px dashed #f0f0f0}
+.dztj_info .tj_img{ width:190px;  }
+.dztj_info .tj_img img{ vertical-align:middle}
+.dztj_info .tj_name{ width:190px; 
+                     white-space:nowrap; 
+                     text-overflow:ellipsis; 
+                     -o-text-overflow:ellipsis; 
+                     overflow: hidden; text-align:center }
+.dztj_info .tj_price{ text-align:center; line-height:24px}
+.dztj_info .tj_price span{ color:#e4393f; font-family:Verdana, Geneva, sans-serif; font-size:14px}
+/*content1c样式*/
+.content1c{ width:210px; height:350px; border:1px solid #ddd;}
+p.shop_name{ height:40px; line-height:40px; border-bottom:1px solid #ddd; text-indent:34px}
+p.shop_pf{ height:40px; line-height:40px; border-bottom:1px solid #ddd; text-indent:10px}
+
+span.shop_zhpf{ background:url(../../images/papmall/tubiao3.png) no-repeat -162px 0px; display:inline-block; width:80px; height:16px;}
+.font{ font-family:Verdana, Geneva, sans-serif}
+.shop_info p{ margin:10px}
+.compare{ margin-left:70px}
+.shop_info{ padding-bottom:5px; border-bottom:1px  solid #f0f0f0}
+.shop_info ul{ margin-left:10px}
+.shop_info li{ height:24px; line-height:24px}
+.shop_info li em{ font-family:Verdana, Geneva, sans-serif}
+span.rate-icon{ background:url(../../images/papmall/tubiao3.png) no-repeat; display:inline-block; width:80px; height:20px; background-position:-214px -93px; margin-left:10px; text-indent:30px }
+p.shop_kf{height:40px; line-height:35px;text-indent:10px}
+.shop_kf span img{ vertical-align:middle }
+p.shop_name2{height:40px; line-height:40px; text-indent:10px }
+p.shop_addr{height:40px; line-height:40px; text-indent:10px;border-bottom:1px solid #f0f0f0}
+p.shop_lianjie{ text-align:center; line-height:30px}
+p.shop_lianjie a{ color:#ff6600}
+p.shop_lianjie a:hover{ text-decoration:underline}

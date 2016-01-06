@@ -1,0 +1,29 @@
+/* 
+    Document   : form
+    Created on : 2014-7-28, 17:47:23
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*form表单*/
+  .form{margin:0px auto;padding:0 10px;}
+.form .row{line-height: 1em;margin-top:10px;}
+.form .note{display:none;}
+.form .row label{margin-right:0; text-align:right; width:100px;display: inline-block;}
+.form .row label.error{border:0px;background:#FFF;color: #333;}
+.form .row label.required{/*color:red;*/}
+.form .row span.required{/*color:red;*/display:none;}
+.form .row .errorMessage{display:inline;color:#B94A48;font-size:12px;border:0px;}
+.form .row input[type='text'],
+.form .row input[type='password']{vertical-align: middle;padding: 0 5px;border:1px solid #dedede;height: 28px;line-height: 28px;background:url(../../images/input-bg.png) repeat-x; width:254px;}
+.form .row input.error{border-color:#C66161;background-color:#FBE2E2;color:#C00;box-shadow:2px 2px 3px #EDEDED inset;}
+.form .row select{vertical-align: middle;padding:4px 5px;border:1px solid #dedede;height: 28px;line-height: 28px;background:url(../../images/input-bg.png) repeat-x;}
+.form .row select{width:150px;}
+.form .row select.error{border-color:#C66161;background-color:#FBE2E2;color:#C00;}
+.form .row input[type='radio'] {background:#FFF; width:10px;}
+.form .row span label{text-align:left;width:50px;}
+.form .row img{vertical-align: middle;}
+.form div.submit{margin-left:85px;background:no-repeat;font-size:12px;height:auto;width:auto;}
+
+.form .row .hint{margin-left:85px;font-size:14px;font-weight: bold;}

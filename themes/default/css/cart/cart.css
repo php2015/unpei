@@ -1,0 +1,102 @@
+  .cartbody{
+        background: #FFFFFF;
+        clear: both;overflow: auto;
+       
+     }
+    .goodslist{
+        border: 1px solid #d7d7d7;
+        background: #F6F6F6;
+        width: 98%;
+        margin: 0 auto;
+        height:30px;
+    }
+    .lable{
+        margin:10px;
+    }
+    .goodslist p{
+        line-height: 30px;
+    }
+    .shop_company{ /*经销商下面的线 */
+        width: 97%;
+        margin: 0 auto;
+        padding-left: 14px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .shop_company span{
+        height: 30px;
+        line-height: 30px;
+    }
+    .shop_company_list{ /*商品框下面的线 */
+        border-bottom: 1px solid #D2D6D9;
+        width: 97%;
+        height: 120px;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+    .goods_list{
+        float: left;
+        width: 40%;
+        padding: 20px 0 0 20px;
+        margin-right: 70px;
+    }
+    .goods_list dl dd{
+        line-height: 25px; 
+        padding:5px 0 0 100px;;
+    }
+    .price{
+        width: 10%;
+        padding-top: 58px;
+        float: left;
+        margin-right: 50px;
+    }
+    .count{
+         width: 10%;
+        float: left;
+        padding-top: 53px;
+        margin-right: 50px;
+      
+    }
+    .price_2{
+        width:5%;
+        padding-top: 56px;
+        float: left;
+        margin-right: 60px;
+    }
+    .del{
+        padding-top: 56px;
+    }
+    .sumtotal{
+        margin-top: 20px;
+        margin-right: 80px;
+        width:150px;
+        float: right;
+    }
+    .sumtotal span{
+        padding-left: 5px;
+        font-size: 18px;
+        color: #E77B1A;
+    }
+      .sumtotal2{    /*delivery.php 合计样式 */
+          margin-top: 20px;
+        margin-right: 50px;
+        width:150px;
+        float: right;
+    }
+    .sumtotal2 span{ /*delivery.php */
+        padding-left: 10px;
+        font-size: 18px;
+        color: #E77B1A;
+    }
+    
+    
+    
+    
+    
+    
+    .clear{
+        clear: both;
+    }
+    .pre{
+        width:200px;
+        float: right;
+    }

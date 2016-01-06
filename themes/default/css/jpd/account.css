@@ -1,0 +1,21 @@
+.wrapper{ width:700px; background:#fff; margin:0 auto}
+.float_l{ float:left}
+.float_r{ float:right}
+p{ margin:0px; line-height:28px}
+.head{ height:55px; line-height:55px; background:; border-bottom:1px solid #0566c2; background:url(../../images/jpd/logo_account.jpg) #1f76c8 no-repeat}
+.title span{ font-family:"微软雅黑"; font-size:24px; font-weight: bold; color:#fff; word-spacing:8px; letter-spacing: 1.5px;}
+.title { margin:0 auto; text-align:center}
+.info{ padding:0 20px; font-size:12px; color:#343434}
+.summary{ height:60px; line-height:30px; border-bottom:2px solid #c9c7c7; border-top:2px solid #c9c7c7; background:#f2f2f2; padding:0 30px}
+.all{ font-size:14px; font-weight:bold; color:#565656; line-height:60px }
+.blue{ color:#1f76c8}
+.detial{ font-size:12px; font-weight:bold; line-height:30px}
+.detial p{ line-height:30px; margin:0; color:#565656}
+.m_left50{ margin-left:50px}
+.f14{ font-size:14px}
+.table{width:685px; text-align:center; border:1px solid #c9c7c7; border-top:none; margin:0 auto; border-right:none; border-bottom:none}
+.table tr{ line-height:30px}
+.table thead tr{ background:#5783ad; line-height:35px; color:#fff; font-weight:bold; font-size:14px; letter-spacing:1px}
+.blue_s{ background:#eef6fd}
+.table tbody td{ border-bottom:1px solid #c9c7c7; border-right:1px solid #c9c7c7; font-size:12px; color:#343434}
+.line30{ line-height:35px; margin:0px; margin-left:7px}

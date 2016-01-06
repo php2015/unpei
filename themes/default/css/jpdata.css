@@ -1,0 +1,277 @@
+.tabs li {
+
+    background:  #F4F4F4;
+    border-right:1px solid #e2e2e2;
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    margin-bottom: -1px;
+    margin-left: 10px;
+    overflow: hidden;
+    position: relative;
+}.tabs li a {
+    border: 1px solid #FFFFFF;
+    display: block;
+    font-size: 14px;
+    outline: medium none;
+    padding: 0 30px;
+}
+.tabs {
+    border-bottom: 1px solid #E2E2E2;
+    height: 32px;
+    width: 100%;
+}
+.tabs a.selected {
+    background: url("../images/tbg1.png") repeat-x;
+    color: #F27300;
+    font-weight: bold;
+    line-height: 32px;
+}
+.part-img{border:1px solid #ccc;height:300px;vertical-align:middle;}
+.arguments {
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    width: 32%;
+}
+.arguments .all_arg{
+    margin: 0 0 10px 15px;
+    padding-top: 10px;
+}
+.arguments .all_arg li {
+    word-wrap: break-word;
+    line-height: 20px;
+}
+.arguments .all_arg li h4 {
+    font-size: 17.5px;
+    padding:5px 0;
+}
+.checkbox-list a{color:#39AE39;}
+.search-content {    
+    /*border: 1px solid #DFDFDF;*/
+    margin: 0 0 10px;
+    padding: 5px 10px;
+}
+.search-content select, 
+.search-content textarea, 
+.search-content input[type="text"] {
+    /*border-radius: 4px;*/
+    color: #555555;
+    display: inline-block;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    padding: 4px 6px;
+    vertical-align: middle;
+}
+.search-content select {
+    height: 30px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+
+}
+ul.search-content li{
+    margin-right: 5px;
+    float:left;
+    
+    *zoom:1;
+    width: 250px;
+    padding:5px 0;
+}
+ul.search-content li label{
+    width: 60px;
+    display:inline-block;
+    text-align:right;
+}
+ul.search-content:after,
+ul.search-content li:after {
+    clear: both;
+    content: "clear";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+ul.search-content li.query-btn{
+    /*margin-left:30px;*/
+}
+ul.search-content li select {
+    border-radius: 0;
+    width: 180px;
+}
+.search-result{display:none;}
+.result-title{
+     background:#EAB265;
+    background: -moz-linear-gradient(top, #F1DAAE, #EAB265);
+    background: -webkit-linear-gradient(top, #F1DAAE, #EAB265);  /* Safari Chrome */
+    background: -ms-linear-gradient(top, #F1DAAE, #EAB265);   /* IE */
+    background: -o-linear-gradient(top, #F1DAAE, #EAB265);}
+.result-title .title{
+    margin-left:20px;
+    height:33px;
+    line-height:33px;
+    color:#764928 ; font-weight:bold
+}
+.search-result .info-back{
+    display:none;cursor: pointer; 
+    float: right; 
+    height:33px;
+    line-height:33px;
+    margin-right:10px;	
+}
+.result-content{
+    margin:10px;
+}
+.vehicle_detail:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.vehicle_detail .details {
+    height: 300px;
+    margin-top: 0;
+}
+.vehicle_detail .details .imgs {
+    float: left;
+    position: relative;
+    width: 52%;
+}
+#galleria {
+    border: 1px solid #CFCFCF;
+    height: 375px;
+}
+.vehicle_detail .details .arguments {
+    border: 1px solid #CFCFCF;
+    color: #666666;
+    float: left;
+    margin-left: 9px;
+    overflow: hidden;
+    padding: 9px;
+    width: 42%;
+}
+.vehicle_detail .details .arguments span {
+    color: #4E4242;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.vehicle_detail .details .all_arg li {
+    margin-top: 5px;
+}
+.con_rows_table{/*max-height:700px;*/ overflow: auto;}
+.content table, .content .holder {
+    /*width: 700px;*/
+}
+.con_rows_table table {
+    background-color: rgba(0, 0, 0, 0);
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+.con_rows_table table tr, 
+.con_rows_table th, 
+.con_rows_table td {
+    border: 1px solid #C0C0C0;
+}
+.con_rows_table table {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #C0C0C0;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+.con_rows_table thead tr {
+
+
+}
+.nowrap {
+    white-space: nowrap;
+}
+.content th, .content td {
+    padding: 3px 10px;
+}
+
+.con_rows_table table th {
+    font-weight: bold;
+}
+
+.nav2 {
+    list-style: none outside none;
+    /*margin-bottom: 20px;*/
+    margin-left: 0;
+}
+.nav-tabs {
+    border-bottom: 1px solid #DDDDDD;
+}
+.nav-tabs:before, .nav-pills:before, .nav-tabs:after, .nav-pills:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.nav-tabs:after, .nav-pills:after {
+    clear: both;
+}
+.nav-tabs:before, .nav-pills:before, .nav-tabs:after, .nav-pills:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.nav-tabs > li, .nav-pills > li {
+    float: left;
+}
+.nav-tabs > li {
+    margin-bottom: -1px;
+}
+.nav-tabs > li > a, .nav-pills > li > a {
+    line-height: 14px;
+    margin-right: 2px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.nav-tabs > li > a {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 0 0;
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    display: block;
+}
+.tabbable ul li a {
+    color: #555555;
+}
+.nav-tabs li a.selected, .nav-tabs li a.active:hover, .nav-tabs li a.active:focus,
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FFFFFF;
+    border-color: #DDDDDD #DDDDDD rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: solid;
+    border-width: 1px;
+    color: #F17200;
+    cursor: default;
+}
+.bor_back{ border:1px solid #c5d2e2}
+.tabs2{border-bottom:1px solid #e2e2e2; background:#f3f3f3; width:auto}
+ul.pjcx_ul li a{ border:none }
+.right-box2{background: none repeat scroll 0 0 #fff;
+            border: 1px solid #e1e1e1;
+            float: right;
+            left: 800px;
+            overflow: auto;
+            position: absolute;
+            top: 335px;
+            width: 160px;}
+ul.pjcx_ul li a:hover{color:#F17200}

@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+/*
+ * 会员、公司信息管理
+ */
+.upload_img li{ float:left; position:relative}
+.upload_img li span img{ position:absolute; top:0; right:10px; z-index:2}
+
+
+span.guanbi3{ position:absolute; z-index:10; right:-10px; cursor:pointer;top:0px}
+span.guanbi3 img{ width:10px; height:10px}
+
+.img_box{  display: table-cell;vertical-align:middle; text-align:center;*display: block;     *font-size: 175px;/*约为高度的0.873，200*0.873 约为175*/       
+*font-family:Arial;/*   防止非utf-8引起的hack失效问题，如gbk编码*/         
+    }
+.gsxx_imgbox{ width:420px; height:400px; border:1px solid #dedede; position:relative; }
+.fdj{ position:absolute; right:0; bottom:0; cursor:pointer; background:url(../images/fdj.jpg) no-repeat; width:20px; height:20px; }
+.litte-img{ width:390px; margin-top:20px}
+.litte-img li{width:60px; height:55px; border:1px solid #dedede; margin:0px 9px; float:left }
+.litte-img ul{ margin-left:-10px}
+.litte-img li div{ width:60px; height:55px; cursor:pointer}
+.litte-img li  img{vertical-align:middle;
+	margin:0 auto;
+   max-width:60px; 
+　　myimg:expression(onload=function(){ 
+　　this.style.width=(this.offsetWidth >60)?"60px":"auto"})}
+.litte-img li  img{vertical-align:middle;
+margin:0 auto;
+   max-height:55px; 
+　　myimg:expression(onload=function(){ 
+　　this.style.height=(this.offsetHeight >55)?"55px":"auto"})}
+.gsxx_imgbox img{vertical-align:middle;
+	margin:0 auto;
+   max-width:380px; 
+　　myimg:expression(onload=function(){ 
+　　this.style.width=(this.offsetWidth >380)?"55px":"auto"})}
+.gsxx_imgbox img{vertical-align:middle;
+margin:0 auto;
+   max-height:380px; 
+　　myimg:expression(onload=function(){ 
+　　this.style.height=(this.offsetHeight >380)?"380px":"auto"})}
+
+.width400{ width:400px}
+
+.gs_info p{ line-height:23px; margin-top:15px}
+
+.gs_info span{ margin-left:10px;}
+.membership li{ background:url(../images/tubiao3.png) no-repeat; text-indent:30px; line-height:20px; margin-top:10px}
+.mem_leibie{ background-position:}
+li.mem_jibie{background-position:0px -28px }
+li.mem_effective{background-position:0px -59px }
+li.mem_status{background-position:0px -89px }
+li.mem_partner{background-position:0px -120px }
+span.renzheng{ background:url(../images/tubiao3.png) 0px -154px no-repeat; display:inline-block; height:23px ;}
+span.jibie{ background:url(../images/tubiao3.png) 0px -28px  repeat-x; display:inline-block; height:16px ; width:70px }
+.essential {border:1px solid #c9d5e3;width:94%}
+.essential ul{border-bottom:1px solid #ccc}
+.essential ul li{ float:left; line-height:28px; position:relative; cursor:pointer; width:150px; height:28px; text-align:center; margin-top:1px;border-right:1px solid #c9d5e3}
+.essential li.current{ background:#fff }
+.essential li .title{ font-size:14px}
+.essential li.current .title{ font-weight:bold; color:#FB7722;}
+.save_editor,.editor{ display:none}
+.groom ul li{ float:left; margin:5px; width:50px; height:50px; overflow:hidden}
+.chicun1 img{ width:100px; height:100px }
+.chicun2 img{ width:50px; height:50px }

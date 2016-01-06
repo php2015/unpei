@@ -1,0 +1,82 @@
+.kjdh_cd li{background:url(../images/kjnav3.png) no-repeat;}
+/*首页*/
+.ycbf{ height:120px;}
+.ddgl_info,.spgl_info,.shjcx_info,.hygl_info,.yxgl_info{ margin:15px 15px;}
+.ddgl_info b{ color:#e97252}
+.ycbf li{ float:left; width:130px; text-align:center; margin-bottom:20px}
+.ycbf span{ text-align:center; border-right:1px solid #444; width:130px; display:block; float:left}
+.ycbf span a{ padding-right:10px;padding-left:10px;}
+.sjcx_sj{ width:80px; text-align:center; float:left; padding:0 8px}
+.sjcx_sj img{ border:1px solid #d8d8d8}
+.shujcx_info{ padding:0}
+
+/*xuanxiangka*/
+.dom-display .normal{display:none;}
+.dom-display{ padding:16.5px 27px}
+.dom-display  p{ margin-top:10px}
+.dom-display2 p,.dom-display4 p,.dom-display6 p{ margin-top:5px}
+.dom-display2{padding:10px 35px}
+.dom-display3{padding:10px 33px}
+.dom-display4{padding:8px 20px}
+.dom-display5{padding:14.5px 40px}
+.dom-display6{padding:9.5px 35px}
+.dom-display7{padding:10px 27px}
+.dom-display8{ padding:10px 0px 15px 0px}
+.dom-display8 table{ width:874px}
+
+/*其他页面公用部分-*/
+
+.yxgl_content1a,.spgl_content1a{margin:10px 20px}
+
+.yxgl_lm,.spgl_lm{ background:url(../images/hyzx_bg.png) repeat-x; width:884px; height:35px; line-height:35px}
+.yxgl_lm span,.spgl_lm span{ color:#0265be; font-size:14px; font-weight:bold} 
+
+.shjcx_content1a,.ddgl_content1a{ padding:10px 20px}
+/*营销管理*/
+.yxgl_content1a p{ height:auto; line-height:24px}
+.yxgl_content1a b{ color:#0265be; font-size:14px}
+.yxgl_content2 .yxgl_add{ background-position:0px -3px}
+.yxgl_content2 .yxgl_del{ background-position:0px -62px}
+.yxgl_content2 .yxgl_editor{ background-position:0px -33px}
+.yxgl_content2 .yxgl_pldr{  background-position:0px -33px}
+
+
+/*商品管理*/
+.spgl_content2 .spgl_add{ background-position:0px -3px}
+.spgl_content2 .spgl_del{ background-position:0px -62px}
+.spgl_content2 .spgl_editor{ background-position:0px -33px}
+.spgl_content2 .spgl_sj{  background-position:0px -33px}
+.spgl_content2 .spgl_xj{ background-position:0px -33px}
+.spgl_content2 .spgl_dc{ background-position:0px -180px}
+.spgl_content2 .spgl_plsc{ background-position:0px -297px}
+.spgl_content2 .spgl_plxz{  background-position:0px -322px}
+.spgl_content2 .spgl_xq{ background-position:0px -122px}
+
+/*会员中心*/
+.hyzx_content1 .hyzx_add_comp,.hyzx_content1 .hyzx_add_parts{ background-position:0px -3px}
+.hyzx_content1 .hyzx_save{ background-position:0px -210px}
+.hyzx_content1 .hyzx_del{ background-position:0px -62px}
+.hyzx_lm{ width:190px; background:url(../images/hyzx_bg.png) repeat-x; border:1px solid #c4d1e1; height:33px; line-height:33px;}
+.hyzx_content2a{}
+.hyzx_content2a_yc{ height:600px; background:#fff; width:30px; text-align:center; }
+.hyzx_lm .xzyc{ background:url(../images/xiangzuotubiao.png) no-repeat center;width:20px; text-align:center; cursor:pointer; height:33px; }
+.hyzx_lm .xzyc1{background:url(../images/xiangyouzhankai.png) no-repeat center;width:20px; text-align:center; cursor:pointer; height:33px; border:1px solid red }
+.hyzx_lm_info{border:1px solid #c4d1e1; background:#fff; height:550px ; border-top:none; width:190px}
+.hyzx_lm_info ul{ padding:15px}
+.hyzx_lm_info ul li{ list-style:none; background:url(../images/tubiao2.png) no-repeat; background-position:0px -153px; text-indent:2em; margin-bottom:10px}
+.hyzx_content2b{width:675px}
+.hyzx_lm2{ background:url(../images/hyzx_bg.png) repeat-x; border:1px solid #c4d1e1; height:33px; line-height:33px;}
+.hyzx_lm2_info{ border:1px solid #c4d1e1; background:#fff; height:550px ; border-top:none}
+.bmxx_info{ padding:20px 60px; }
+
+.bmxx_info p{ margin-bottom:10px}
+.bmxx_info select{ width:133px}
+.ygxx_info{padding:20px 60px;display:none}
+.ygxx_info p{ margin-bottom:10px}
+/*商家查询*/
+
+/*订单管理*/
+.ddgl_content2 .ddgl_add{ background-position:0px -3px}
+.ddgl_content2 .ddgl_del{ background-position:0px -62px}
+
+

@@ -1,0 +1,302 @@
+<?php
+
+/**
+ * AuthFilter class file.
+ * @author Christoffer Niska <ChristofferNiska@gmail.com>
+ * @copyright Copyright &copy; Christoffer Niska 2012-
+ * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
+ * @package auth.components
+ */
+
+/**
+ * Filter that automatically checks if the user has access to the current controller action.
+ */
+class AuthFilter extends CFilter {
+
+    /**
+     * @var array name-value pairs that would be passed to business rules associated
+     * with the tasks and roles assigned to the user.
+     */
+    public $params = array();
+
+    /**
+     * Performs the pre-action filtering.
+     * @param CFilterChain $filterChain the filter chain that the filter is on.
+     * @return boolean whether the filtering process should continue and the action should be executed.
+     * @throws CHttpException if the user is denied access.
+     */
+    protected function preFilter($filterChain) {
+        $itemName = '';
+        $controller = $filterChain->controller;
+        $action = $filterChain->action;
+        /* @var $user CWebUser */
+        $user = Yii::app()->getUser();
+        //未登陆可访问页面：帮助中心
+        $controllerId = strtolower($controller->getId());
+        $actionId = strtolower($action->getId());
+
+        if (in_array($controllerId, array('page', 'pay'))) {
+            return true;
+        }
+
+        //判断用户是否过期
+        $ExpirationTime = Yii::app()->user->getExpirationTime();
+        if ($ExpirationTime && $ExpirationTime < $_SERVER['REQUEST_TIME']) {
+            Yii::app()->user->logout();
+        }
+
+        // 是否登录
+        if ($user->isGuest)
+            $user->loginRequired();
+     
+        //用户配额管理
+        $this->operatequota();
+        if (isset($_SERVER["HTTP_X_REQUESTED_WITH"]) && strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) == "xmlhttprequest") {
+            return true;
+            // ajax 请求的处理方式 
+        } else {
+            //self::updatelasttime();
+            //判断机构是否登记
+ 
+            $organID = Yii::app()->user->getOrganID();
+            $organ = Organ::model()->findByPk($organID);
+            if ($organ->Status == 0) {
+                Yii::app()->controller->redirect(array('/user/activation/index'));
+            } else if ($organ->Status == 2) {
+                Yii::app()->controller->redirect(array('/user/activecompany/index'));
+            }
+//            $identityorganID = Commonmodel::getAuthOrgan();
+//            if (empty($identityorganID['ID']) || empty($identityorganID['OrganName']) || empty($identityorganID['Phone']) || empty($identityorganID['Email'])) {
+//                if (!($controllerId == 'company' && $actionId == 'index')) {
+//                    Yii::app()->controller->redirect(array("/member/company/index"));
+//                }
+//                if ($identityorganID['Identity'] == 1) {
+////                Yii::app()->controller->red("//site/nopower");
+//                    if (!($controllerId == 'makecompany' && ($actionId == 'index' || $actionId == 'Savedealerorgan'))) {
+//                        Yii::app()->controller->redirect(array("/maker/makecompany/index"));
+//                    }
+//                } elseif ($identityorganID['Identity'] == 2) {
+//                    if (!($controllerId == 'dealercompany' && ($actionId == 'index' || $actionId == 'Savedealerorgan'))) {
+//                        Yii::app()->controller->redirect(array("/dealer/dealercompany/index"));
+//                    }
+//                } elseif ($identityorganID['Identity'] == 3) {
+//                    if (!($controllerId == 'servicecompany' && ($actionId == 'index' || $actionId == 'Saveserviceorgan'))) {
+//                        Yii::app()->controller->redirect(array("/servicer/servicecompany/index"));
+//                    }
+//                }
+            // }
+            $route = $controller->getRoute();
+            $rootID = F::getroot();
+            $activeMenu = FrontMenu::getMenuIDByRoute($route, $rootID);
+            //url参数
+            $urlparams = $_GET;
+            $urlparams = array_filter($urlparams);
+            if ($activeMenu) {
+                //用户日志
+                $infos = $this->recordlog($activeMenu['Name']);
+                //MongoDB用户操作详细日志
+                $oper = F::getoperation($activeMenu['Url'], $info == null, $urlparams);
+                if (($mod = $controller->getModule()) !== null) {
+                    $item .= strtolower($mod->getId());
+                    $cont = strtolower($controller->getId());
+                    $item .= "-" . $cont;
+                    if (!in_array($item, array('maker-default', 'dealer-default', 'servicer-default'))) {
+                        if (Yii::app()->user->isEmploye() && !Yii::app()->user->checkAccess($activeMenu['ID'])) {
+                            Yii::app()->controller->render("//site/nopower");
+                            Yii::app()->end();
+                        }
+                    }
+                }
+            } else {
+                $route = $controller->getRoute();
+                $urlparams = $_GET;
+                $oper = F::getoperation($route, $info == null, $urlparams);
+                if (Yii::app()->user->isEmploye() && !Yii::app()->user->checkAccess($activeMenu['ID'])) {
+                    Yii::app()->controller->render("//site/nopower");
+                    Yii::app()->end();
+                }// 正常请求的处理方式 
+            }
+        }
+
+
+        // Module
+        if (($module = $controller->getModule()) !== null) {
+            $itemName .= strtolower($module->getId());
+            $controllerId = strtolower($controller->getId());
+            if (!in_array($itemName, array('maker', 'dealer', 'servicer', 'mall', 'cim'))) {
+                return true;
+            } else if (Yii::app()->user->isMaker()) {
+                if (in_array($itemName, array('maker'))) {
+                    return true;
+                } else {
+                    $itemName .= "-" . $controllerId;
+                    if (in_array($itemName, array('mall-makeorder', 'cim-contact', 'mall-makecount'))) {
+                        return true;
+                    }
+
+                    Yii::app()->controller->redirect(array('/maker'));
+                }
+            } else if (Yii::app()->user->isDealer()) {
+                if (in_array($itemName, array('dealer'))) {
+                    return true;
+                } else {
+                    $itemName .= "-" . $controllerId;
+                    if (in_array($itemName, array('mall-order', 'mall-goods', 'mall-quotationbuy',
+                                'mall-quotationsell', 'mall-myaddress', 'mall-querygoods', 'mall-payment', 'mall-quotations', 'mall-sellcount',
+                                'mall-quotationorder', 'mall-sell', 'mall-jporder', 'dealer-makequery', 'cim-businessshare', 'cim-contact', 'cim-pricemanage',
+                                'cim-logistics', 'cim-discountset'
+                            ))) {
+                        return true;
+                    }
+                    Yii::app()->controller->redirect(array('/dealer'));
+                }
+            } else if (Yii::app()->user->isServicer()) {
+                if (in_array($itemName, array('servicer'))) {
+                    return true;
+                } else {
+                    $itemName .= "-" . $controllerId;
+                    if (in_array($itemName, array('mall-quotationbuy', 'mall-payment', 'mall-querygoods', 'mall-jporder', 'mall-buy', 'mall-myaddress', 'mall-inquiry', 'mall-quotation', 'cim-contact'))) {
+                        return true;
+                    }
+                    Yii::app()->controller->redirect(array('/servicer'));
+                }
+            } else {
+                Yii::app()->controller->redirect(array('/site/index'));
+            }
+        }
+        return true;
+    }
+
+    public static function updatelasttime() {
+        $time = time();
+        $userid = Yii::app()->user->id;
+        $sql = "update jpd_user set LastVisitTime=$time where ID=$userid";
+        $res = Yii::app()->jpdb->createCommand($sql)->execute();
+    }
+
+    public function recordlog($info) {
+        $organID = Yii::app()->user->getOrganID();
+        $time = time();
+        $sql = "insert into jpd_user_log values(null,$organID,'$info',$time)";
+        return Yii::app()->jpdb->createCommand($sql)->execute();
+    }
+
+    //用户配额管理
+    public function operatequota() {
+        $organID = Yii::app()->user->getOrganID();
+        $username = Yii::app()->user->getState('userName');
+        $userid = Yii::app()->user->id;
+        $route = Yii::app()->getController()->getRoute();
+        $url = Yii::app()->createUrl('upload/quota') . '?OrganID=' . $organID . '&username=' . $username . '&UserID=' . $userid . '&Route=' . str_replace('/', '-', $route);
+        $c = new EMongoCriteria();
+        $c->OperUrl('==', $route);
+        $c->OrganID('==', $organID);
+        $res = OperateQuota::model()->find($c);
+        //从redis中取配额提醒配置
+        $QuotaRemind = Yii::app()->redis->get('QuotaRemind');
+        if (!$QuotaRemind) {
+            //如果redis中没有就从数据库中取出来存到redis中
+            $QuotaRemind = $this->getQuotaRemind();
+            if ($QuotaRemind) {
+                Yii::app()->redis->set('QuotaRemind', $QuotaRemind);
+            }
+        }
+        $QuotaRemind = array_filter(explode(',', $QuotaRemind));
+        if (!$QuotaRemind)
+            $QuotaRemind = array('100%');
+        $times = array();
+        foreach ($QuotaRemind as $v) {
+            $times[] = round($v * $res->MaxNum / 100, 0);
+        }
+        $times = array_unique($times);
+        $max = end($times);
+        $url.='&Time=' . ($res->Num + 1);
+        if ($res) {
+            //判断mongo记录时间是否为当天
+            $t = $_SERVER['REQUEST_TIME'];
+            $today = date('Y-m-d', $t);
+            $time = strtotime($today);
+            $mongotime = date('Y-m-d', $res->Time);
+            if ($mongotime == $today) {
+                //mongo记录时间是当天，判断num是否大于等于maxnum，如果大于等于maxnum返回特定页面并发送危险信息到邮箱（参见登入）
+                if ($res->MaxNum > $res->Num) {
+                    $res->Num = $res->Num + 1;
+                    $res->save();
+                } else if ($res->MaxNum < $res->Num) {
+                    $currentnum = $res->Num;
+                    if ($currentnum > $max) {
+                        Yii::app()->controller->redirect(array('/site/fail'));
+                        die;
+                    } elseif ($currentnum == $max) {
+                        $res->Num = $res->Num + 1;
+                        $res->save();
+                        $this->sendfscok($url);
+                        Yii::app()->controller->redirect(array('/site/fail'));
+                        die;
+                    } elseif (in_array($currentnum, $times)) {
+                        $this->sendfscok($url);
+                    }
+                    $res->Num = $res->Num + 1;
+                    $res->save();
+                } else {
+                    //发送提醒邮件
+                    $res->Num = $res->Num + 1;
+                    $res->save();
+                    $this->sendfscok($url);
+                }
+            } else {
+                $res->Num = 1;
+                $res->Time = $t;
+                $res->save();
+            }
+        }
+    }
+
+    //发送fsockopen
+    public function sendfscok($url) {
+        $params = Yii::app()->params['fsockopen'];
+        if (!$params['open']) {
+            return false;
+        }
+        $fp = fsockopen($params['host'], $params['port'], $errno, $errstr, $params['timeout']);
+        $host = $params['host'];
+        if (!$fp) {
+            echo "$errstr ($errno)<br />\n";
+        } else {
+            $out = 'GET ' . $url . " HTTP/1.1\r\n";
+            $out .= "Host: $host\r\n";
+            $out .= "Connection: Close\r\n\r\n";
+            $res = fwrite($fp, $out);
+            fclose($fp);
+        }
+    }
+
+    //获取配额提醒百分比
+    public function getQuotaRemind() {
+        $sql = 'select Value from jpd_admin_settings where Category="system" and `Key`="QuotaRemind"';
+        $res = Yii::app()->jpdb->createCommand($sql)->queryRow();
+        if (!$res) {
+            //如果数据不存在则插入一条默认值,并发送邮件提醒
+            $default = '120%,140%,160%,180%,200%';
+            $value = addslashes(@serialize($default));
+            $insert = ' insert into jpd_admin_settings (`Category`,`Key`,`Value`) values ("system","QuotaRemind","' . $value . '")';
+            $count = Yii::app()->jpdb->createCommand($insert)->execute();
+            if ($count) {
+                $url = Yii::app()->createUrl('upload/quota') . '?Handle=adddefault&Default=' . $default;
+                $this->sendfscok($url);
+            }
+            return $default;
+        }
+        if ($res['Value']) {
+            $value = trim(@unserialize($res['Value']));
+            if ($value != '') {
+                return $value;
+            } else {
+                return null;
+            }
+        } else {
+            return null;
+        }
+    }
+
+}

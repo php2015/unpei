@@ -1,0 +1,78 @@
+
+/*购物车*/
+.gwc_lm{ height:30px; border-bottom:1px solid #e1d8d9;}
+.gwc_lm span{ letter-spacing:1px}
+.gwc_lm_info{ background:#fff; width:130px; height:30px; border:1px solid #dedede; border-bottom:none; display:inline-block; margin-left:10px; line-height:29px; font-size:14px; font-weight:bold; color:#ec8051; text-align:center}
+.step{ height:100px; background:#fff; border:1px solid #e1e1e1; border-top:none}
+.step_info{ padding-top:30px; padding-left:200px;}
+.step_info li{ width:190px; float:left; }
+.step_info li span{ font-size:14px; margin-left:20px} 
+span.span_color{ color:#ec4800;}
+.gwc_nogoods{ height:215px; border:1px solid #e1d8d9; background:#fff}
+.no_goods{ font-family:"微软雅黑"; font-size:20px; font-weight:bold; letter-spacing:1px}
+.no_list{ margin-left:150px; margin-top:40px}
+.no_list a{ font-size:14px; color:#ec4801}
+
+
+
+.gwc_list{border:1px solid #e1d8d9; background:#fff;min-height:200px;_height:200px;}
+.gwc_list_info{ margin:10px}
+.gwc_list_lm{ height:30px; line-height:30px}
+.gwc_list_lm img{ vertical-align:middle; margin-top:-4px}
+.gwc_list_lm span{ font-weight:bold; font-size:14px; margin-left:10px; letter-spacing:1px}
+.gwc_list_head{ height:30px; line-height:30px; background:#f6f6f6; border:1px solid #e1e1e1}
+.gwc_list_head ul li{ float:left; text-align:center}
+.jxs{ height:30px; line-height:30px; border-bottom:1px solid #ebebeb}
+.gwc_goods_list li{ height:125px;border-bottom:1px solid  #ebebeb}
+.gwc_goods_list li .checkbox{ margin:35px 10px; }
+.gwc_img{ margin:5px 10px 5px 5px; width:75px; height:75px}
+.name{ color:#ec8051}
+.gwc_spxx{ margin-top:5px}
+.gwc_price,.gwc_shuliang,.gwc_xiaoji,.gwc_caozuo{ line-height:90px; text-align:center; height:90px}
+.gwc_xiaoji{ color:#eb7616; font-size:14px; font-weight:bold}
+.width360{ width:360px}
+.zongjia{ height:50px; line-height:50px; text-align:right; margin-right:50px}
+.zongjia span{  color:#eb7616; font-family:Verdana, Geneva, sans-serif; font-size:20px}
+.gwc_list_lm a{ color:#ec8051; cursor:pointer}
+.addr table{ width:905px;margin:10px 35px;}
+.addr table td{ height:40px; line-height:40px;}
+
+.addr input{ margin-top:15px;}
+tr.table_bor{ border:1px solid #ec8051; background:#e7fae6;}
+td.width50{ width:50px; text-align:center}
+.table_bor a{ color:red}
+.refer{ margin-right:50px; text-align:right; margin-top:40px}
+.refer a{color:#eb4800}
+.refer img{ vertical-align:middle}
+.radio{ vertical-align:middle}
+
+table.ygsp td{ border:1px solid #ebebeb; height:45px; line-height:45px; text-indent:20px}
+.zhifu{ margin-right:20px; text-align:right}
+.zhifu span{ color:#eb4800; font-family:Verdana, Geneva, sans-serif; font-size:16px; font-weight:bold}
+.zhifu_color{ color:red}
+
+.gwc_shuliang a{ display:block; width:22px; height:22px; background:url(../../images/num-control.png) no-repeat 0px; float:left; margin-top:35px; margin-left:10px}
+.gwc_shuliang input{margin-top:35px;width:50px; margin-left:10px;text-align:center}
+
+a.s{ background-position:right center}
+
+.icon-arr-b {
+    background: url("../../images/icons/icon-arr-b.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 4px;
+    width: 7px;
+}
+
+.icon-arr-green-t {
+    background: url("../../images/icons/icon-arr-green-t.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 4px;
+    width: 7px;
+}
+.m-top{margin-top:10px}
+.button2{padding:4px 5px; border:1px solid #ebebeb; border-radius:3px; background:#f17400; color:#fff; cursor: pointer; outline: none}
+
+  #make-car-m {border:2px solid #f2b303;}
+    .right_A .makelist li.selected3{ background:#f2b303 }
+    .right_A .makelist ul li.li_list:hover{background:#f2b303}
+    .right_A .makelist ul li.li_top{color:#f2b303}
+    .car_brand .left_A ul li a{color:#f2b303}
+    .car_brand .left_A ul li a:hover { background:#f2b303}
